@@ -373,7 +373,7 @@
     },
     "mem.HugePagesFree": {
         "display_name": "Free Huge Pages",
-        "units": "free huge pages",
+        "units": "count",
         "max": null,
         "min": 0,
         "sig_figs": null,
@@ -394,7 +394,7 @@
     },
     "mem.HugePagesRsvd": {
         "display_name": "Reserved Huge Pages",
-        "units": "reserved huge pages",
+        "units": "count",
         "max": null,
         "min": 0,
         "sig_figs": null,
@@ -415,7 +415,7 @@
     },
     "mem.HugePagesSurp": {
         "display_name": "Surplus Huge Pages",
-        "units": "surplus huge pages",
+        "units": "count",
         "max": null,
         "min": 0,
         "sig_figs": null,
@@ -436,7 +436,7 @@
     },
     "mem.HugePagesTotal": {
         "display_name": "Total Huge Pages",
-        "units": "total huge pages",
+        "units": "count",
         "max": null,
         "min": 0,
         "sig_figs": null,
