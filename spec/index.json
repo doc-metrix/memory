@@ -1014,8 +1014,8 @@
             "http://wiki.fcctt.org/index.php?title=FC39Understanding_Virtual_Memory_Statistics_in_/proc/meminfo/en"
         ]
     },
-    "mem.swap.utilization": {
-        "display_name": "Swap Utilization",
+    "mem.swap.spaceUtilization": {
+        "display_name": "Swap Space Utilization",
         "units": "utilization",
         "max": 1,
         "min": 0,
@@ -1025,17 +1025,17 @@
         "formula": {
             "equation": "\\frac{swap_{total} - swap_{free}}{swap_{total}}",
             "variables": {
-                "swap_free": {
+                "swap_{free}": {
                     "description": "The amount of free swap disk.",
                     "reference": "https://github.com/doc-metrix/memory"
                 },
-                "swap_total": {
+                "swap_{total}": {
                     "description": "The total amount of swap disk.",
                     "reference": "https://github.com/doc-metrix/memory"
                 }
             }
         },
-        "description": "The decimal percentage of swap disk being used. It is calculated by dividing the amount of swap disk used by the total swap disk.",
+        "description": "The decimal percentage of swap disk space being used (swap disk used divided by total swap disk size).",
         "notes": "",
         "source": null,
         "device": "disk",
@@ -1045,8 +1045,8 @@
             "http://linux.die.net/man/5/proc"
         ]
     },
-    "mem.utilization": {
-        "display_name": "RAM Utilization",
+    "mem.RAM.spaceUtilization": {
+        "display_name": "RAM Space Utilization",
         "units": "utilization",
         "max": 1,
         "min": 0,
@@ -1056,20 +1056,51 @@
         "formula": {
             "equation": "\\frac{RAM_{total} - RAM_{free}}{RAM_{total}}",
             "variables": {
-                "RAM_free": {
+                "RAM_{free}": {
                     "description": "The amount of free RAM.",
                     "reference": "https://github.com/doc-metrix/memory"
                 },
-                "RAM_total": {
+                "RAM_{total}": {
                     "description": "The total amount of usable RAM.",
                     "reference": "https://github.com/doc-metrix/memory"
                 }
             }
         },
-        "description": "The decimal percentage of RAM being used. It is calculated by dividing the amount of RAM used by total usable RAM (total RAM less a few reserved bits and the kernel binary code).",
+        "description": "The decimal percentage of RAM being used (RAM used divided by total usable RAM - total RAM less a few reserved bits and the kernel binary code).",
         "notes": "",
         "source": null,
         "device": "RAM",
+        "vendors": "*",
+        "classification": "memory",
+        "refs": [
+            "http://linux.die.net/man/5/proc"
+        ]
+    },
+    "mem.virtual.spaceUtilization": {
+        "display_name": "Virtual Memory Space Utilization",
+        "units": "utilization",
+        "max": 1,
+        "min": 0,
+        "sig_figs": null,
+        "data_type": "percentage",
+        "type": "derived",
+        "formula": {
+            "equation": "\\frac{virtualMemory_{used}}{virtualMemory_{total}}",
+            "variables": {
+                "virtualMemory_{used}": {
+                    "description": "The amount of space that have been virtually memory allocated.",
+                    "reference": "https://github.com/doc-metrix/memory"
+                },
+                "virtualMemory_{total}": {
+                    "description": "The total amount of space reserved for virtual memory allocation.",
+                    "reference": "https://github.com/doc-metrix/memory"
+                }
+            }
+        },
+        "description": "The decimal percentage of virtual memory space being used (space that have been virtually memory allocated divided by total space reserved for virtual memory allocation).",
+        "notes": "",
+        "source": null,
+        "device": "virtual memory",
         "vendors": "*",
         "classification": "memory",
         "refs": [
