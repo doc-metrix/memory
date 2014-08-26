@@ -1,11 +1,11 @@
 {
-   "mem.Active": {
-        "display_name": "Active Virtual Memory",
+   "mem.active": {
+        "displayName": "Active Virtual Memory",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of memory that has been used more recently, and usually will not be reclaimed unless absolutely necessary (such as when there is a great need by the kernel to free up memory).",
@@ -25,13 +25,13 @@
             "http://careers.directi.com/display/tu/Understanding+and+optimizing+Memory+utilization"
         ]
     },
-    "mem.ActiveAnon": {
-        "display_name": "Active Anonymous RAM",
+    "mem.activeAnon": {
+        "displayName": "Active Anonymous RAM",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of active memory that is not mapped to the filesystem, and exists in an anonymous region in memory such as a process' stack or heap space.",
@@ -51,13 +51,13 @@
             "http://careers.directi.com/display/tu/Understanding+and+optimizing+Memory+utilization"
         ]
     },
-    "mem.ActiveFile": {
-        "display_name": "Active Disk Memory",
+    "mem.activeFile": {
+        "displayName": "Active Disk Memory",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of active memory that is mapped to the filesystem.",
@@ -77,13 +77,13 @@
             "http://careers.directi.com/display/tu/Understanding+and+optimizing+Memory+utilization"
         ]
     },
-    "mem.AnonHugePages": {
-        "display_name": "Anonymous Huge Pages",
+    "mem.anonHugePages": {
+        "displayName": "Anonymous Huge Pages",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of pages larger than the system's default page size. They are not backed to the filesystem, and have been mapped to user processes.",
@@ -103,13 +103,13 @@
             "http://oreilly.com/catalog/spt2/chapter/ch04.html#72236"
         ]
     },
-    "mem.AnonPages": {
-        "display_name": "Anonymous Pages",
+    "mem.anonPages": {
+        "displayName": "Anonymous Pages",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of pages that are not backed to the filesystem, and have been mapped to user processes.",
@@ -129,13 +129,13 @@
             "http://oreilly.com/catalog/spt2/chapter/ch04.html#72236"
         ]
     },
-    "mem.Bounce": {
-        "display_name": "Bounce Buffers",
+    "mem.bounce": {
+        "displayName": "Bounce Buffers",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of RAM that is used as buffers for data streams between memory and devices (such as SCSI or PCI devices).",
@@ -155,13 +155,13 @@
             "http://wiki.fcctt.org/index.php?title=FC39Understanding_Virtual_Memory_Statistics_in_/proc/meminfo/en"
         ]
     },
-    "mem.Buffers": {
-        "display_name": "Block Buffers",
+    "mem.buffers": {
+        "displayName": "Block Buffers",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of memory used as buffers for storing filesystem metadata when disks are accessed. For example, when a file is accessed, the content of the file is stored in the page cache while the file metadata such as file permissions are stored in buffers.",
@@ -183,13 +183,13 @@
             "http://stackoverflow.com/questions/6345020/linux-memory-buffer-vs-cache"
         ]
     },
-    "mem.Cached": {
-        "display_name": "Page Cache",
+    "mem.cached": {
+        "displayName": "Page Cache",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of memory used for the page cache to store the files when reading from or writing to disk. Does not include mem.SwapCached.",
@@ -210,13 +210,13 @@
             "http://stackoverflow.com/questions/6345020/linux-memory-buffer-vs-cache"
         ]
     },
-    "mem.CommitLimit": {
-        "display_name": "Virtual Memory Commit Limit",
+    "mem.commitLimit": {
+        "displayName": "Virtual Memory Commit Limit",
         "units": "KB",
         "max": null,
         "min": null,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The total amount of memory currently available to be allocated on the system based on the overcommit ratio ('vm.overcommit_ratio' or '/proc/sys/vm/overcommit_ratio'). It is calculated by (total usable RAM * overcommit ratio) + the total swap disk size. This limit is only adhered to if strict overcommit accounting is enabled (mode 2 in 'vm.overcommit_memory' or '/proc/sys/vm/overcommit_memory'). For example, on a system with 1GB of RAM and 7GB of swap with a overcommit_ratio of 30, the CommitLimit is 7.3GB.",
@@ -236,13 +236,13 @@
             "https://www.kernel.org/doc/Documentation/vm/overcommit-accounting"
         ]
     },
-    "mem.CommittedAS": {
-        "display_name": "Committed Virtual Memory",
+    "mem.committedAS": {
+        "displayName": "Committed Virtual Memory",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of memory presently allocated to processes on the system, and henceforth the maximum amount of memory that these processes may use. With strict overcommit enabled on the system (mode 2 in 'vm.overcommit_memory' or '/proc/sys/vm/overcommit_memory'), allocations which would exceed the CommitLimit will not be permitted. This is useful if one needs to guarantee that processes will not fail due to lack of memory once that memory has been successfully allocated.",
@@ -263,13 +263,13 @@
             "http://careers.directi.com/display/tu/Understanding+and+optimizing+Memory+utilization"
         ]
     },
-    "mem.DirectMap1G": {
-        "display_name": "1GB Pages",
+    "mem.directMap1G": {
+        "displayName": "1GB Pages",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of RAM that is mapped using a page size of 1GB.",
@@ -288,13 +288,13 @@
             "http://wiki.fcctt.org/index.php?title=FC39Understanding_Virtual_Memory_Statistics_in_/proc/meminfo/en"
         ]
     },
-    "mem.DirectMap2M": {
-        "display_name": "2MB Pages",
+    "mem.directMap2M": {
+        "displayName": "2MB Pages",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of RAM that is mapped using a page size of 2 megabytes.",
@@ -313,13 +313,13 @@
             "http://wiki.fcctt.org/index.php?title=FC39Understanding_Virtual_Memory_Statistics_in_/proc/meminfo/en"
         ]
     },
-    "mem.DirectMap4k": {
-        "display_name": "4KB Pages",
+    "mem.directMap4k": {
+        "displayName": "4KB Pages",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of RAM that is mapped using a page size of 4KB.",
@@ -338,13 +338,13 @@
             "http://wiki.fcctt.org/index.php?title=FC39Understanding_Virtual_Memory_Statistics_in_/proc/meminfo/en"
         ]
     },
-    "mem.Dirty": {
-        "display_name": "Dirty Pages",
+    "mem.dirty": {
+        "displayName": "Dirty Pages",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of pages in RAM that differ from their corresponding mapped data on disk (for example, as a result of asynchronous disk write). A large amount of dirty pages means that there are a lot of disk writes that have not completed.",
@@ -364,13 +364,13 @@
             "http://wiki.fcctt.org/index.php?title=FC39Understanding_Virtual_Memory_Statistics_in_/proc/meminfo/en"
         ]
     },
-    "mem.HardwareCorrupted": {
-        "display_name": "Corruptted Memory",
+    "mem.hardwareCorrupted": {
+        "displayName": "Corruptted Memory",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of memory that has been corrupted.",
@@ -389,13 +389,13 @@
             "http://linux.die.net/man/5/proc"
         ]
     },
-    "mem.HighFree": {
-        "display_name": "Free High RAM",
+    "mem.highFree": {
+        "displayName": "Free High RAM",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of free highmem, RAM that is above approximately 860MB used for user processes or the page cache. The kernel must use tricks to access this memory, making it slower to access than lowmem.",
@@ -414,13 +414,13 @@
             "http://linux.die.net/man/5/proc"
         ]
     },
-    "mem.HighTotal": {
-        "display_name": "Total High RAM",
+    "mem.highTotal": {
+        "displayName": "Total High RAM",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The total amount of highmem, RAM that is above approximately 860MB used for user processes or the page cache. The kernel must use tricks to access this memory, making it slower to access than lowmem.",
@@ -439,13 +439,13 @@
             "http://linux.die.net/man/5/proc"
         ]
     },
-    "mem.HugePagesFree": {
-        "display_name": "Free Huge Pages",
+    "mem.hugePagesFree": {
+        "displayName": "Free Huge Pages",
         "units": "hugepages",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The number of huge pages in the pool of huge pages that are not yet allocated.",
@@ -464,13 +464,13 @@
             "http://linux.die.net/man/5/proc"
         ]
     },
-    "mem.HugePagesRsvd": {
-        "display_name": "Reserved Huge Pages",
+    "mem.hugePagesRsvd": {
+        "displayName": "Reserved Huge Pages",
         "units": "hugepages",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The number of huge pages for which a commitment to allocate from the pool of huge pages has been made, but no allocation has yet been made. These reserved huge pages guarantee that a process will be able to allocate a huge page from the pool at fault time (when the process accesses the memory).",
@@ -489,13 +489,13 @@
             "http://linux.die.net/man/5/proc"
         ]
     },
-    "mem.HugePagesSurp": {
-        "display_name": "Surplus Huge Pages",
+    "mem.hugePagesSurp": {
+        "displayName": "Surplus Huge Pages",
         "units": "hugepages",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The number of huge pages above the current number of 'persistent' huge pages in the kernel's pool of huge pages.",
@@ -514,13 +514,13 @@
             "https://www.kernel.org/doc/Documentation/vm/hugetlbpage.txt"
         ]
     },
-    "mem.HugePagesTotal": {
-        "display_name": "Total Huge Pages",
+    "mem.hugePagesTotal": {
+        "displayName": "Total Huge Pages",
         "units": "hugepages",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The total number of huge pages in the pool of huge pages.",
@@ -539,13 +539,13 @@
             "http://linux.die.net/man/5/proc"
         ]
     },
-    "mem.Hugepagesize": {
-        "display_name": "Huge Page Size",
+    "mem.hugePageSize": {
+        "displayName": "Huge Page Size",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The size of huge pages.",
@@ -564,13 +564,13 @@
             "https://www.kernel.org/doc/Documentation/vm/hugetlbpage.txt"
         ]
     },
-    "mem.Inactive": {
-        "display_name": "Inactive Virtual Memory",
+    "mem.inactive": {
+        "displayName": "Inactive Virtual Memory",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of memory which has been less recently used. It is more eligible to be reclaimed for other purposes.",
@@ -589,13 +589,13 @@
             "http://linux.die.net/man/5/proc"
         ]
     },
-    "mem.InactiveAnon": {
-        "display_name": "Inactive Anonymous RAM",
+    "mem.inactiveAnon": {
+        "displayName": "Inactive Anonymous RAM",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of inactive memory that is not mapped to the filesystem, and exists in an anonymous region in memory such as a process' stack or heap space. Inactive memory is memory which has been less recently used and more eligible to be reclaimed for other purposes.",
@@ -614,13 +614,13 @@
             "http://linux.die.net/man/5/proc"
         ]
     },
-    "mem.InactiveFile": {
-        "display_name": "Inactive Disk Memory",
+    "mem.inactiveFile": {
+        "displayName": "Inactive Disk Memory",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of inactive memory that is mapped to the filesystem. Inactive memory is memory which has been less recently used and more eligible to be reclaimed for other purposes.",
@@ -639,13 +639,13 @@
             "http://linux.die.net/man/5/proc"
         ]
     },
-    "mem.KernelStack": {
-        "display_name": "Kernel Stack",
+    "mem.kernelStack": {
+        "displayName": "Kernel Stack",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of memory allocated to kernel stacks. The more processes running on the system, the more kernel stacks are allocated.",
@@ -664,13 +664,13 @@
             "http://linux.die.net/man/5/proc"
         ]
     },
-    "mem.LowFree": {
-        "display_name": "Free Low RAM",
+    "mem.lowFree": {
+        "displayName": "Free Low RAM",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of free lowmem, RAM which can be used for everything that highmem can be used for, but is also available for the kernel's use for its own data structures. Among many other things, it is where everything from Slab is allocated.",
@@ -689,13 +689,13 @@
             "http://linux.die.net/man/5/proc"
         ]
     },
-    "mem.LowTotal": {
-        "display_name": "Total Low RAM",
+    "mem.lowTotal": {
+        "displayName": "Total Low RAM",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The total amount of lowmem, RAM which can be used for everything that highmem can be used for, but is also available for the kernel's use for its own data structures. Among many other things, it is where everything from Slab is allocated.",
@@ -714,13 +714,13 @@
             "http://linux.die.net/man/5/proc"
         ]
     },
-    "mem.Mapped": {
-        "display_name": "Mapped RAM",
+    "mem.mapped": {
+        "displayName": "Mapped RAM",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The total amount of file content which have already been mapped inside a process' address space, and have been paged-in (swapped from disk to RAM).",
@@ -740,13 +740,13 @@
             "http://wiki.fcctt.org/index.php?title=FC39Understanding_Virtual_Memory_Statistics_in_/proc/meminfo/en"
         ]
     },
-    "mem.MemFree": {
-        "display_name": "Free RAM",
+    "mem.memFree": {
+        "displayName": "Free RAM",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The total amount of free lowmem and free highmem.",
@@ -765,13 +765,13 @@
             "http://linux.die.net/man/5/proc"
         ]
     },
-    "mem.MemTotal": {
-        "display_name": "Total RAM",
+    "mem.memTotal": {
+        "displayName": "Total RAM",
         "units": "KB",
         "max": null,
         "min": null,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The total amount of usable RAM (total RAM less a few reserved bits and the kernel binary code).",
@@ -790,13 +790,13 @@
             "http://linux.die.net/man/5/proc"
         ]
     },
-    "mem.Mlocked": {
-        "display_name": "Mlocked RAM",
+    "mem.mlocked": {
+        "displayName": "Mlocked RAM",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of allocated memory that’s strictly prohibited from being paged-out (swapped from RAM to disk). Since this memory cannot be swapped out, major page faults won't happen. Therefore, memory access time is guaranteed to be as fast as possible. Certain processes, such as those related to user interactive experience requiring a real time response, may be mlocked to ensure quality experience.",
@@ -815,13 +815,13 @@
             "http://linux.die.net/man/5/proc"
         ]
     },
-    "mem.NFSUnstable": {
-        "display_name": "Unstable NFS Pages",
+    "mem.nfsUnstable": {
+        "displayName": "Unstable NFS Pages",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of network file system (NFS) pages sent to the server, but has not yet been written to disk.",
@@ -841,13 +841,13 @@
             "http://wiki.fcctt.org/index.php?title=FC39Understanding_Virtual_Memory_Statistics_in_/proc/meminfo/en"
         ]
     },
-    "mem.PageTables": {
-        "display_name": "Page Tables",
+    "mem.pageTables": {
+        "displayName": "Page Tables",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of memory used by page tables (mappings from virtual memory addresses to RAM addresses).",
@@ -866,13 +866,13 @@
             "http://linux.die.net/man/5/proc"
         ]
     },
-    "mem.SReclaimable": {
-        "display_name": "Slab Reclaimable RAM",
+    "mem.sReclaimable": {
+        "displayName": "Slab Reclaimable RAM",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of slab that may be reclaimed, such as caches. Slab is cache that is dedicated for kernel data structures.",
@@ -892,13 +892,13 @@
             "http://wiki.fcctt.org/index.php?title=FC39Understanding_Virtual_Memory_Statistics_in_/proc/meminfo/en"
         ]
     },
-    "mem.SUnreclaim": {
-        "display_name": "Slab Unreclaimable RAM",
+    "mem.sUnreclaim": {
+        "displayName": "Slab Unreclaimable RAM",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of slab that cannot be reclaimed when memory needs to be freed. Slab is cache that is dedicated for kernel data structures.",
@@ -918,13 +918,13 @@
             "http://wiki.fcctt.org/index.php?title=FC39Understanding_Virtual_Memory_Statistics_in_/proc/meminfo/en"
         ]
     },
-    "mem.Shmem": {
-        "display_name": "Shared Virtual Memory",
+    "mem.shMem": {
+        "displayName": "Shared Virtual Memory",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of shared memory used by group(s) processes. For example, pages allocated for System V IPC (Inter Process Communication).",
@@ -944,13 +944,13 @@
             "http://wiki.fcctt.org/index.php?title=FC39Understanding_Virtual_Memory_Statistics_in_/proc/meminfo/en"
         ]
     },
-    "mem.Slab": {
-        "display_name": "Slab RAM",
+    "mem.slab": {
+        "displayName": "Slab RAM",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of memory used to cache kernel data structures.",
@@ -970,13 +970,13 @@
             "http://wiki.fcctt.org/index.php?title=FC39Understanding_Virtual_Memory_Statistics_in_/proc/meminfo/en"
         ]
     },
-    "mem.SwapCached": {
-        "display_name": "Swap Pages Cached",
+    "mem.swapCached": {
+        "displayName": "Swap Pages Cached",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of memory that was once paged-out and is now paged-in, but still exists in the swap file. (If memory needs to be freed, these pages won't need to be paged-out again because they are already in the swap file. This saves I/O.)",
@@ -996,13 +996,13 @@
             "http://wiki.fcctt.org/index.php?title=FC39Understanding_Virtual_Memory_Statistics_in_/proc/meminfo/en"
         ]
     },
-    "mem.SwapFree": {
-        "display_name": "Free Swap Disk Memory",
+    "mem.swapFree": {
+        "displayName": "Free Swap Disk Memory",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of swap space that is currently unused.",
@@ -1021,13 +1021,13 @@
             "http://linux.die.net/man/5/proc"
         ]
     },
-    "mem.SwapTotal": {
-        "display_name": "Total Swap Disk Memory",
+    "mem.swapTotal": {
+        "displayName": "Total Swap Disk Memory",
         "units": "KB",
         "max": null,
         "min": null,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The total amount of swap space available.",
@@ -1046,13 +1046,13 @@
             "http://linux.die.net/man/5/proc"
         ]
     },
-    "mem.Unevictable": {
-        "display_name": "Unevictable RAM",
+    "mem.unevictable": {
+        "displayName": "Unevictable RAM",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of pages that cannot be paged-out of RAM. Unevictable is a superset of mlocked.",
@@ -1072,13 +1072,13 @@
             "http://wiki.fcctt.org/index.php?title=FC39Understanding_Virtual_Memory_Statistics_in_/proc/meminfo/en"
         ]
     },
-    "mem.VmallocChunk": {
-        "display_name": "Largest Virtual Memory Block",
+    "mem.vmallocChunk": {
+        "displayName": "Largest Virtual Memory Block",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of memory in the largest contiguous block of virtual memory address space that is available for a new virtual memory mapping.",
@@ -1098,13 +1098,13 @@
             "http://wiki.fcctt.org/index.php?title=FC39Understanding_Virtual_Memory_Statistics_in_/proc/meminfo/en"
         ]
     },
-    "mem.VmallocTotal": {
-        "display_name": "Total Virtual Memory",
+    "mem.vmallocTotal": {
+        "displayName": "Total Virtual Memory",
         "units": "KB",
         "max": null,
         "min": null,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The total amount of reserved space for virtual memory allocation.",
@@ -1124,13 +1124,13 @@
             "http://wiki.fcctt.org/index.php?title=FC39Understanding_Virtual_Memory_Statistics_in_/proc/meminfo/en"
         ]
     },
-    "mem.VmallocUsed": {
-        "display_name": "Used Virtual Memory",
+    "mem.vmallocUsed": {
+        "displayName": "Used Virtual Memory",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of pages which have been virtually memory allocated.",
@@ -1150,13 +1150,13 @@
             "http://wiki.fcctt.org/index.php?title=FC39Understanding_Virtual_Memory_Statistics_in_/proc/meminfo/en"
         ]
     },
-    "mem.Writeback": {
-        "display_name": "Writeback Pages",
+    "mem.writeBack": {
+        "displayName": "Writeback Pages",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of dirty pages in RAM currently being written back to disk.",
@@ -1176,13 +1176,13 @@
             "http://wiki.fcctt.org/index.php?title=FC39Understanding_Virtual_Memory_Statistics_in_/proc/meminfo/en"
         ]
     },
-    "mem.WritebackTmp": {
-        "display_name": "Writeback Buffers",
+    "mem.writeBackTmp": {
+        "displayName": "Writeback Buffers",
         "units": "KB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The amount of memory used by filesystem on user space (FUSE) for temporary writeback buffers.",
@@ -1202,13 +1202,13 @@
             "http://wiki.fcctt.org/index.php?title=FC39Understanding_Virtual_Memory_Statistics_in_/proc/meminfo/en"
         ]
     },
-    "mem.swap.spaceUtilization": {
-        "display_name": "Swap Space Utilization",
+    "mem.swapSpaceUtilization": {
+        "displayName": "Swap Space Utilization",
         "units": "utilization",
         "max": 1,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "percentage",
+        "sigFigs": null,
+        "dataType": "percentage",
         "type": "derived",
         "formula": {
             "equation": "\\frac{swap_{total} - swap_{free}}{swap_{total}}",
@@ -1233,13 +1233,13 @@
             "http://linux.die.net/man/5/proc"
         ]
     },
-    "mem.RAM.spaceUtilization": {
-        "display_name": "RAM Space Utilization",
+    "mem.ramSpaceUtilization": {
+        "displayName": "RAM Space Utilization",
         "units": "utilization",
         "max": 1,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "percentage",
+        "sigFigs": null,
+        "dataType": "percentage",
         "type": "derived",
         "formula": {
             "equation": "\\frac{RAM_{total} - RAM_{free}}{RAM_{total}}",
@@ -1264,13 +1264,13 @@
             "http://linux.die.net/man/5/proc"
         ]
     },
-    "mem.virtual.spaceUtilization": {
-        "display_name": "Virtual Memory Space Utilization",
+    "mem.virtualSpaceUtilization": {
+        "displayName": "Virtual Memory Space Utilization",
         "units": "utilization",
         "max": 1,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "percentage",
+        "sigFigs": null,
+        "dataType": "percentage",
         "type": "derived",
         "formula": {
             "equation": "\\frac{virtualMemory_{used}}{virtualMemory_{total}}",
