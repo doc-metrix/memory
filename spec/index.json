@@ -1068,7 +1068,7 @@
                 }
             }
         },
-        "description": "The decimal percentage of RAM being used (RAM used divided by total usable RAM - total RAM minus a few reserved bits and the kernel binary code).",
+        "description": "The decimal percentage of RAM being used (RAM used divided by total usable RAM, i.e., total RAM minus a few reserved bits and the kernel binary code).",
         "notes": "",
         "platforms": {
             "linux": ["/proc/meminfo"]

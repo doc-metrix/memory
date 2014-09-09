@@ -491,7 +491,7 @@ Min | Max | Units | Metric Type | Data Type
 
 #### [mem.ramSpaceUtilization](http://linux.die.net/man/5/proc)
 
-The decimal percentage of RAM being used (RAM used divided by total usable RAM - total RAM minus a few reserved bits and the kernel binary code).
+The decimal percentage of RAM being used (RAM used divided by total usable RAM, i.e., total RAM minus a few reserved bits and the kernel binary code).
 
 Min | Max | Units | Metric Type | Data Type 
 :---: | :---: | :---: | ---: | ---: |
