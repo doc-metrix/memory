@@ -80,7 +80,7 @@ Min | Max | Units | Metric Type | Data Type
 
 #### [mem.commitLimit](http://linux.die.net/man/5/proc)
 
-The total amount of memory currently available to be allocated on the system based on the `overcommit_ratio` (`vm.overcommit_ratio` or `/proc/sys/vm/overcommit_ratio`). The metric is calculated by `(total usable RAM * overcommit ratio) + the total swap disk size`. This limit is only adhered to if strict overcommit accounting is enabled (mode 2 in `vm.overcommit_memory` or `/proc/sys/vm/overcommit_memory`). For example, on a system with 1GB of RAM and 7GB of swap with a `overcommit_ratio` of 30, the `CommitLimit` is 7.3GB.
+The total amount of memory currently available to be allocated on the system based on the `overcommit_ratio` (`vm.overcommit_ratio` or `/proc/sys/vm/overcommit_ratio`). The metric is calculated by `(total usable RAM * overcommit ratio) + the total swap disk size`. This limit is only adhered to if strict overcommit accounting is enabled (mode 2 in `vm.overcommit_memory` or `/proc/sys/vm/overcommit_memory`). For example, on a system with 1GB of RAM and 7GB of swap with an `overcommit_ratio` of 30, the `CommitLimit` is 7.3GB.
 
 Min | Max | Units | Metric Type | Data Type 
 :---: | :---: | :---: | ---: | ---: |
@@ -242,6 +242,273 @@ Min | Max | Units | Metric Type | Data Type
 0 | `null` | [KB](https://github.com/doc-metrix/units#kb) | raw | [integer](https://github.com/doc-metrix/data-types#integer)
 
 
+#### [mem.inactiveFile](http://linux.die.net/man/5/proc)
+
+The amount of inactive memory that is mapped to the filesystem. Inactive memory is memory which has been less recently used and more eligible to be reclaimed for other purposes.
+
+Note: The maximum value is the total amount of inactive memory.
+
+Min | Max | Units | Metric Type | Data Type 
+:---: | :---: | :---: | ---: | ---: |
+0 | `null` | [KB](https://github.com/doc-metrix/units#kb) | raw | [integer](https://github.com/doc-metrix/data-types#integer)
+
+
+#### [mem.kernelStack](http://linux.die.net/man/5/proc)
+
+The amount of memory allocated to kernel stacks. The more processes running on the system, the more kernel stacks are allocated.
+
+Min | Max | Units | Metric Type | Data Type 
+:---: | :---: | :---: | ---: | ---: |
+0 | `null` | [KB](https://github.com/doc-metrix/units#kb) | raw | [integer](https://github.com/doc-metrix/data-types#integer)
+
+
+#### [mem.lowFree](http://linux.die.net/man/5/proc)
+
+The amount of free lowmem RAM which can be used for everything that highmem can be used for, but is also available for the kernel to use for its own data structures. Among many other things, it is where everything from Slab is allocated.
+
+Note: Starting with Linux `2.6.19`, the kernel must be configured with `CONFIG_HIGHMEM` to show this metric. The maximum is the total amount of low memory.
+
+Min | Max | Units | Metric Type | Data Type 
+:---: | :---: | :---: | ---: | ---: |
+0 | `null` | [KB](https://github.com/doc-metrix/units#kb) | raw | [integer](https://github.com/doc-metrix/data-types#integer)
+
+
+#### [mem.lowTotal](http://linux.die.net/man/5/proc)
+
+The total amount of lowmem RAM which can be used for everything that highmem can be used for, but is also available for the kernel to use for its own data structures. Among many other things, it is where everything from Slab is allocated.
+
+Note: Starting with Linux `2.6.19`, the kernel must be configured with `CONFIG_HIGHMEM` to show this metric.
+
+Min | Max | Units | Metric Type | Data Type 
+:---: | :---: | :---: | ---: | ---: |
+0 | `null` | [KB](https://github.com/doc-metrix/units#kb) | raw | [integer](https://github.com/doc-metrix/data-types#integer)
+
+
+#### [mem.mapped](http://linux.die.net/man/5/proc)
+
+The total amount of file content which have already been mapped inside a process' address space and have been paged-in (swapped from disk to RAM).
+
+Min | Max | Units | Metric Type | Data Type 
+:---: | :---: | :---: | ---: | ---: |
+0 | `null` | [KB](https://github.com/doc-metrix/units#kb) | raw | [integer](https://github.com/doc-metrix/data-types#integer)
+
+
+#### [mem.memFree](http://linux.die.net/man/5/proc)
+
+The total amount of free lowmem and free highmem.
+
+Min | Max | Units | Metric Type | Data Type 
+:---: | :---: | :---: | ---: | ---: |
+0 | `null` | [KB](https://github.com/doc-metrix/units#kb) | raw | [integer](https://github.com/doc-metrix/data-types#integer)
+
+
+#### [mem.memTotal](http://linux.die.net/man/5/proc)
+
+The total amount of usable RAM (total RAM minus a few reserved bits and the kernel binary code).
+
+Min | Max | Units | Metric Type | Data Type 
+:---: | :---: | :---: | ---: | ---: |
+0 | `null` | [KB](https://github.com/doc-metrix/units#kb) | raw | [integer](https://github.com/doc-metrix/data-types#integer)
+
+
+
+#### [mem.mlocked](http://linux.die.net/man/5/proc)
+
+The amount of allocated memory that is strictly prohibited from being paged-out (swapped from RAM to disk). Since this memory cannot be swapped out, major page faults will not happen. Therefore, memory access time is guaranteed to be as fast as possible. Certain processes, such as those related to interactive user experience requiring a real time response, may be mlocked to ensure quality experience.
+
+Note: From Linux `2.6.28` to `2.6.30`, kernel must be configured with `CONFIG_UNEVICTABLE_LRU` to show this metric.
+
+Min | Max | Units | Metric Type | Data Type 
+:---: | :---: | :---: | ---: | ---: |
+0 | `null` | [KB](https://github.com/doc-metrix/units#kb) | raw | [integer](https://github.com/doc-metrix/data-types#integer)
+
+
+#### [mem.nfsUnstable](http://linux.die.net/man/5/proc)
+
+The amount of network file system (NFS) pages sent to the server, but has not yet been written to disk.
+
+Min | Max | Units | Metric Type | Data Type 
+:---: | :---: | :---: | ---: | ---: |
+0 | `null` | [KB](https://github.com/doc-metrix/units#kb) | raw | [integer](https://github.com/doc-metrix/data-types#integer)
+
+
+#### [mem.pageTables](http://linux.die.net/man/5/proc)
+
+The amount of memory used by page tables (mappings from virtual memory addresses to RAM addresses).
+
+Min | Max | Units | Metric Type | Data Type 
+:---: | :---: | :---: | ---: | ---: |
+0 | `null` | [KB](https://github.com/doc-metrix/units#kb) | raw | [integer](https://github.com/doc-metrix/data-types#integer)
+
+
+#### [mem.sReclaimable](http://linux.die.net/man/5/proc)
+
+The amount of slab that may be reclaimed, such as caches. Slab is cache that is dedicated for kernel data structures.
+
+Note: The maximum value is the total amount of slab memory.
+
+Min | Max | Units | Metric Type | Data Type 
+:---: | :---: | :---: | ---: | ---: |
+0 | `null` | [KB](https://github.com/doc-metrix/units#kb) | raw | [integer](https://github.com/doc-metrix/data-types#integer)
+
+
+
+#### [mem.sUnreclaim](http://linux.die.net/man/5/proc)
+
+The amount of slab that cannot be reclaimed when memory needs to be freed. Slab is cache that is dedicated for kernel data structures.
+
+Note: The maximum value is the total amount of slab memory.
+
+Min | Max | Units | Metric Type | Data Type 
+:---: | :---: | :---: | ---: | ---: |
+0 | `null` | [KB](https://github.com/doc-metrix/units#kb) | raw | [integer](https://github.com/doc-metrix/data-types#integer)
+
+
+
+#### [mem.shMem](http://linux.die.net/man/5/proc)
+
+The amount of shared memory used by group(s) processes. For example, pages allocated for System V IPC (Inter Process Communication).
+
+Min | Max | Units | Metric Type | Data Type 
+:---: | :---: | :---: | ---: | ---: |
+0 | `null` | [KB](https://github.com/doc-metrix/units#kb) | raw | [integer](https://github.com/doc-metrix/data-types#integer)
+
+
+
+#### [mem.slab](http://linux.die.net/man/5/proc)
+
+The amount of memory used to cache kernel data structures.
+
+Min | Max | Units | Metric Type | Data Type 
+:---: | :---: | :---: | ---: | ---: |
+0 | `null` | [KB](https://github.com/doc-metrix/units#kb) | raw | [integer](https://github.com/doc-metrix/data-types#integer)
+
+
+#### [mem.swapCached](http://linux.die.net/man/5/proc)
+
+The amount of memory that was once paged-out and is now paged-in, but still exists in the swap file. If memory needs to be freed, these pages will not need to be paged-out again because they are already in the swap file. This saves I/O.
+
+Min | Max | Units | Metric Type | Data Type 
+:---: | :---: | :---: | ---: | ---: |
+0 | `null` | [KB](https://github.com/doc-metrix/units#kb) | raw | [integer](https://github.com/doc-metrix/data-types#integer)
+
+
+#### [mem.swapFree](http://linux.die.net/man/5/proc)
+
+The amount of swap space that is currently unused.
+
+Note: The maximum value is the total amount of swap memory.
+
+Min | Max | Units | Metric Type | Data Type 
+:---: | :---: | :---: | ---: | ---: |
+0 | `null` | [KB](https://github.com/doc-metrix/units#kb) | raw | [integer](https://github.com/doc-metrix/data-types#integer)
+
+
+
+#### [mem.swapTotal](http://linux.die.net/man/5/proc)
+
+The total amount of swap space available.
+
+Min | Max | Units | Metric Type | Data Type 
+:---: | :---: | :---: | ---: | ---: |
+0 | `null` | [KB](https://github.com/doc-metrix/units#kb) | raw | [integer](https://github.com/doc-metrix/data-types#integer)
+
+
+
+#### [mem.unevictable](http://linux.die.net/man/5/proc)
+
+The amount of pages that cannot be paged-out of RAM. Unevictable is a superset of mlocked.
+
+Note: From Linux `2.6.28` to `2.6.30`, kernel must be configured with `CONFIG_UNEVICTABLE_LRU` to show this metric.
+
+Min | Max | Units | Metric Type | Data Type 
+:---: | :---: | :---: | ---: | ---: |
+0 | `null` | [KB](https://github.com/doc-metrix/units#kb) | raw | [integer](https://github.com/doc-metrix/data-types#integer)
+
+
+
+#### [mem.vmallacChunk](http://linux.die.net/man/5/proc)
+
+The amount of memory in the largest contiguous block of virtual memory address space that is available for a new virtual memory mapping.
+
+Min | Max | Units | Metric Type | Data Type 
+:---: | :---: | :---: | ---: | ---: |
+0 | `null` | [KB](https://github.com/doc-metrix/units#kb) | raw | [integer](https://github.com/doc-metrix/data-types#integer)
+
+
+
+#### [mem.vmallocTotal](http://linux.die.net/man/5/proc)
+
+The total amount of reserved space for virtual memory allocation.
+
+Min | Max | Units | Metric Type | Data Type 
+:---: | :---: | :---: | ---: | ---: |
+0 | `null` | [KB](https://github.com/doc-metrix/units#kb) | raw | [integer](https://github.com/doc-metrix/data-types#integer)
+
+
+#### [mem.vmallocUsed](http://linux.die.net/man/5/proc)
+
+The amount of pages which have been virtually memory allocated.
+
+Note: The maximum value is the total amount of reserved space for virtual memory allocation.
+
+Min | Max | Units | Metric Type | Data Type 
+:---: | :---: | :---: | ---: | ---: |
+0 | `null` | [KB](https://github.com/doc-metrix/units#kb) | raw | [integer](https://github.com/doc-metrix/data-types#integer)
+
+
+#### [mem.writeBack](http://linux.die.net/man/5/proc)
+
+The amount of dirty pages in RAM currently being written back to disk.
+
+Note: The maximum value is the total amount of dirty pages.
+
+Min | Max | Units | Metric Type | Data Type 
+:---: | :---: | :---: | ---: | ---: |
+0 | `null` | [KB](https://github.com/doc-metrix/units#kb) | raw | [integer](https://github.com/doc-metrix/data-types#integer)
+
+
+
+#### [mem.writeBackTmp](http://linux.die.net/man/5/proc)
+
+The amount of memory used by filesystem on user space (FUSE) for temporary writeback buffers.
+
+Min | Max | Units | Metric Type | Data Type 
+:---: | :---: | :---: | ---: | ---: |
+0 | `null` | [KB](https://github.com/doc-metrix/units#kb) | raw | [integer](https://github.com/doc-metrix/data-types#integer)
+
+
+
+#### [mem.swapSpaceUtilization](http://linux.die.net/man/5/proc)
+
+The decimal percentage of swap disk space being used (swap disk used divided by total swap disk size).
+
+Min | Max | Units | Metric Type | Data Type 
+:---: | :---: | :---: | ---: | ---: |
+0 | 1 | [utilization](https://github.com/doc-metrix/units#utilization) | derived | [percentage](https://github.com/doc-metrix/data-types#percentage)
+
+
+
+#### [mem.ramSpaceUtilization](http://linux.die.net/man/5/proc)
+
+The decimal percentage of RAM being used (RAM used divided by total usable RAM - total RAM minus a few reserved bits and the kernel binary code).
+
+Min | Max | Units | Metric Type | Data Type 
+:---: | :---: | :---: | ---: | ---: |
+0 | 1 | [utilization](https://github.com/doc-metrix/units#utilization) | derived | [percentage](https://github.com/doc-metrix/data-types#percentage)
+
+
+
+#### [mem.virtualSpaceUtilization](http://linux.die.net/man/5/proc)
+
+The decimal percentage of virtual memory space being used (allocated virtual memory space divided by total space reserved for virtual memory allocation).
+
+Min | Max | Units | Metric Type | Data Type 
+:---: | :---: | :---: | ---: | ---: |
+0 | 1 | [utilization](https://github.com/doc-metrix/units#utilization) | derived | [percentage](https://github.com/doc-metrix/data-types#percentage)
+
+
+
 
 ===
 ## Contributing
@@ -297,7 +564,7 @@ $ bower update doc-metrix-memory
 
 ### Utilities
 
-List of utitlies using this specification:
+List of utilities using this specification:
 
 *	[Node.js](https://github.com/doc-metrix/memory-node)
 

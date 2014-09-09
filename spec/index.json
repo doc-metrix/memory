@@ -187,7 +187,7 @@
         "dataType": "integer",
         "type": "raw",
         "formula": null,
-        "description": "The total amount of memory currently available to be allocated on the system based on the overcommit_ratio ('vm.overcommit_ratio' or '/proc/sys/vm/overcommit_ratio'). The metric is calculated by (total usable RAM * overcommit ratio) + the total swap disk size. This limit is only adhered to if strict overcommit accounting is enabled (mode 2 in 'vm.overcommit_memory' or '/proc/sys/vm/overcommit_memory'). For example, on a system with 1GB of RAM and 7GB of swap with a overcommit_ratio of 30, the CommitLimit is 7.3GB.",
+        "description": "The total amount of memory currently available to be allocated on the system based on the overcommit_ratio ('vm.overcommit_ratio' or '/proc/sys/vm/overcommit_ratio'). The metric is calculated by (total usable RAM * overcommit ratio) + the total swap disk size. This limit is only adhered to if strict overcommit accounting is enabled (mode 2 in 'vm.overcommit_memory' or '/proc/sys/vm/overcommit_memory'). For example, on a system with 1GB of RAM and 7GB of swap with an overcommit_ratio of 30, the CommitLimit is 7.3GB.",
         "notes": "",
         "platforms": {
             "linux": ["/proc/meminfo"]
@@ -569,8 +569,8 @@
         "dataType": "integer",
         "type": "raw",
         "formula": null,
-        "description": "The amount of free lowmem, RAM which can be used for everything that highmem can be used for, but is also available for the kernel's use for its own data structures. Among many other things, it is where everything from Slab is allocated.",
-        "notes": "Starting with Linux 2.6.19, kernel must be configured with CONFIG_HIGHMEM to show this metric. The maximum is the total amount of low memory.",
+        "description": "The amount of free lowmem RAM which can be used for everything that highmem can be used for, but is also available for the kernel to use for its own data structures. Among many other things, it is where everything from Slab is allocated.",
+        "notes": "Starting with Linux 2.6.19, the kernel must be configured with CONFIG_HIGHMEM to show this metric. The maximum is the total amount of low memory.",
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
@@ -590,8 +590,8 @@
         "dataType": "integer",
         "type": "raw",
         "formula": null,
-        "description": "The total amount of lowmem, RAM which can be used for everything that highmem can be used for, but is also available for the kernel's use for its own data structures. Among many other things, it is where everything from Slab is allocated.",
-        "notes": "Starting with Linux 2.6.19, kernel must be configured with CONFIG_HIGHMEM to show this metric.",
+        "description": "The total amount of lowmem RAM which can be used for everything that highmem can be used for, but is also available for the kernel to use for its own data structures. Among many other things, it is where everything from Slab is allocated.",
+        "notes": "Starting with Linux 2.6.19, the kernel must be configured with CONFIG_HIGHMEM to show this metric.",
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
@@ -611,7 +611,7 @@
         "dataType": "integer",
         "type": "raw",
         "formula": null,
-        "description": "The total amount of file content which have already been mapped inside a process' address space, and have been paged-in (swapped from disk to RAM).",
+        "description": "The total amount of file content which have already been mapped inside a process' address space and have been paged-in (swapped from disk to RAM).",
         "notes": "",
         "platforms": {
             "linux": ["/proc/meminfo"]
@@ -649,12 +649,12 @@
         "displayName": "Total RAM",
         "units": "KB",
         "max": null,
-        "min": null,
+        "min": 0,
         "sigFigs": null,
         "dataType": "integer",
         "type": "raw",
         "formula": null,
-        "description": "The total amount of usable RAM (total RAM less a few reserved bits and the kernel binary code).",
+        "description": "The total amount of usable RAM (total RAM minus a few reserved bits and the kernel binary code).",
         "notes": "",
         "platforms": {
             "linux": ["/proc/meminfo"]
@@ -675,7 +675,7 @@
         "dataType": "integer",
         "type": "raw",
         "formula": null,
-        "description": "The amount of allocated memory that’s strictly prohibited from being paged-out (swapped from RAM to disk). Since this memory cannot be swapped out, major page faults won't happen. Therefore, memory access time is guaranteed to be as fast as possible. Certain processes, such as those related to user interactive experience requiring a real time response, may be mlocked to ensure quality experience.",
+        "description": "The amount of allocated memory that is strictly prohibited from being paged-out (swapped from RAM to disk). Since this memory cannot be swapped out, major page faults will not happen. Therefore, memory access time is guaranteed to be as fast as possible. Certain processes, such as those related to interactive user experience requiring a real time response, may be mlocked to ensure quality experience.",
         "notes": "From Linux 2.6.28 to 2.6.30, kernel must be configured with CONFIG_UNEVICTABLE_LRU to show this metric.",
         "platforms": {
             "linux": ["/proc/meminfo"]
@@ -827,7 +827,7 @@
         "dataType": "integer",
         "type": "raw",
         "formula": null,
-        "description": "The amount of memory that was once paged-out and is now paged-in, but still exists in the swap file. (If memory needs to be freed, these pages won't need to be paged-out again because they are already in the swap file. This saves I/O.)",
+        "description": "The amount of memory that was once paged-out and is now paged-in, but still exists in the swap file. If memory needs to be freed, these pages will not need to be paged-out again because they are already in the swap file. This saves I/O.",
         "notes": "",
         "platforms": {
             "linux": ["/proc/meminfo"]
@@ -930,7 +930,7 @@
         "displayName": "Total Virtual Memory",
         "units": "KB",
         "max": null,
-        "min": null,
+        "min": 0,
         "sigFigs": null,
         "dataType": "integer",
         "type": "raw",
@@ -1068,7 +1068,7 @@
                 }
             }
         },
-        "description": "The decimal percentage of RAM being used (RAM used divided by total usable RAM - total RAM less a few reserved bits and the kernel binary code).",
+        "description": "The decimal percentage of RAM being used (RAM used divided by total usable RAM - total RAM minus a few reserved bits and the kernel binary code).",
         "notes": "",
         "platforms": {
             "linux": ["/proc/meminfo"]
@@ -1101,7 +1101,7 @@
                 }
             }
         },
-        "description": "The decimal percentage of virtual memory space being used (space that have been virtually memory allocated divided by total space reserved for virtual memory allocation).",
+        "description": "The decimal percentage of virtual memory space being used (allocated virtual memory space divided by total space reserved for virtual memory allocation).",
         "notes": "",
         "platforms": {
             "linux": ["/proc/meminfo"]
