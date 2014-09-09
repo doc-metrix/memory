@@ -8,7 +8,7 @@
         "dataType": "integer",
         "type": "raw",
         "formula": null,
-        "description": "The amount of memory that has been used more recently, and usually will not be reclaimed unless absolutely necessary (such as when there is a great need by the kernel to free up memory).",
+        "description": "The amount of memory that has been used more recently and usually will not be reclaimed unless absolutely necessary (such as when there is a great need by the kernel to free up memory).",
         "notes": "",
         "platforms": {
             "linux": ["/proc/meminfo"]
@@ -30,7 +30,7 @@
         "dataType": "integer",
         "type": "raw",
         "formula": null,
-        "description": "The amount of active memory that is not mapped to the filesystem, and exists in an anonymous region in memory such as a process' stack or heap space.",
+        "description": "The amount of active memory that is not mapped to the filesystem and exists in an anonymous region in memory such as a process' stack or heap space.",
         "notes": "The maximum value is the total amount of active memory.",
         "platforms": {
             "linux": ["/proc/meminfo"]
@@ -74,7 +74,7 @@
         "dataType": "integer",
         "type": "raw",
         "formula": null,
-        "description": "The amount of pages larger than the system's default page size. They are not backed to the filesystem, and have been mapped to user processes.",
+        "description": "The number of pages larger than the system's default page size. These pages are not backed to the filesystem and have been mapped to user processes.",
         "notes": "Linux kernel must be configured with CONFIG_TRANSPARENT_HUGEPAGE to show this metric.",
         "platforms": {
             "linux": ["/proc/meminfo"]
@@ -96,7 +96,7 @@
         "dataType": "integer",
         "type": "raw",
         "formula": null,
-        "description": "The amount of pages that are not backed to the filesystem, and have been mapped to user processes.",
+        "description": "The number of pages that are not backed to the filesystem and have been mapped to user processes.",
         "notes": "",
         "platforms": {
             "linux": ["/proc/meminfo"]
@@ -140,7 +140,7 @@
         "dataType": "integer",
         "type": "raw",
         "formula": null,
-        "description": "The amount of memory used as buffers for storing filesystem metadata when disks are accessed. For example, when a file is accessed, the content of the file is stored in the page cache while the file metadata such as file permissions are stored in buffers.",
+        "description": "The amount of memory used as buffers for storing filesystem metadata when disks are accessed. For example, when a file is accessed, the content of the file is stored in the page cache while the file metadata, such as file permissions, are stored in buffers.",
         "notes": "",
         "platforms": {
             "linux": ["/proc/meminfo"]
@@ -164,7 +164,7 @@
         "dataType": "integer",
         "type": "raw",
         "formula": null,
-        "description": "The amount of memory used for the page cache to store the files when reading from or writing to disk. Does not include mem.SwapCached.",
+        "description": "The amount of memory used for the page cache to store the files when reading from or writing to disk. Does not include mem.swapCached.",
         "notes": "",
         "platforms": {
             "linux": ["/proc/meminfo"]
@@ -187,7 +187,7 @@
         "dataType": "integer",
         "type": "raw",
         "formula": null,
-        "description": "The total amount of memory currently available to be allocated on the system based on the overcommit ratio ('vm.overcommit_ratio' or '/proc/sys/vm/overcommit_ratio'). It is calculated by (total usable RAM * overcommit ratio) + the total swap disk size. This limit is only adhered to if strict overcommit accounting is enabled (mode 2 in 'vm.overcommit_memory' or '/proc/sys/vm/overcommit_memory'). For example, on a system with 1GB of RAM and 7GB of swap with a overcommit_ratio of 30, the CommitLimit is 7.3GB.",
+        "description": "The total amount of memory currently available to be allocated on the system based on the overcommit_ratio ('vm.overcommit_ratio' or '/proc/sys/vm/overcommit_ratio'). The metric is calculated by (total usable RAM * overcommit ratio) + the total swap disk size. This limit is only adhered to if strict overcommit accounting is enabled (mode 2 in 'vm.overcommit_memory' or '/proc/sys/vm/overcommit_memory'). For example, on a system with 1GB of RAM and 7GB of swap with a overcommit_ratio of 30, the CommitLimit is 7.3GB.",
         "notes": "",
         "platforms": {
             "linux": ["/proc/meminfo"]
@@ -232,7 +232,7 @@
         "dataType": "integer",
         "type": "raw",
         "formula": null,
-        "description": "The amount of RAM that is mapped using a page size of 1GB.",
+        "description": "The amount of RAM that is mapped using a 1GB page size.",
         "notes": "",
         "platforms": {
             "linux": ["/proc/meminfo"]
@@ -253,7 +253,7 @@
         "dataType": "integer",
         "type": "raw",
         "formula": null,
-        "description": "The amount of RAM that is mapped using a page size of 2 megabytes.",
+        "description": "The amount of RAM that is mapped using a 2MB page size.",
         "notes": "",
         "platforms": {
             "linux": ["/proc/meminfo"]
@@ -274,7 +274,7 @@
         "dataType": "integer",
         "type": "raw",
         "formula": null,
-        "description": "The amount of RAM that is mapped using a page size of 4KB.",
+        "description": "The amount of RAM that is mapped using a 4KB page size.",
         "notes": "",
         "platforms": {
             "linux": ["/proc/meminfo"]
@@ -295,7 +295,7 @@
         "dataType": "integer",
         "type": "raw",
         "formula": null,
-        "description": "The amount of pages in RAM that differ from their corresponding mapped data on disk (for example, as a result of asynchronous disk write). A large amount of dirty pages means that there are a lot of disk writes that have not completed.",
+        "description": "The number of pages in RAM that differ from their corresponding mapped data on disk (for example, as a result of asynchronous disk write). A large number of dirty pages means that many disk writes have not completed.",
         "notes": "",
         "platforms": {
             "linux": ["/proc/meminfo"]
@@ -309,7 +309,7 @@
         ]
     },
     "mem.hardwareCorrupted": {
-        "displayName": "Corruptted Memory",
+        "displayName": "Corrupted Memory",
         "units": "KB",
         "max": null,
         "min": 0,
@@ -338,8 +338,8 @@
         "dataType": "integer",
         "type": "raw",
         "formula": null,
-        "description": "The amount of free highmem, RAM that is above approximately 860MB used for user processes or the page cache. The kernel must use tricks to access this memory, making it slower to access than lowmem.",
-        "notes": "Starting with Linux 2.6.19, kernel must be configured with CONFIG_HIGHMEM to show this metric. The maximum value is the total amount of high memory.",
+        "description": "The amount of free highmem RAM that is above approximately 860MB used for user processes or the page cache. The kernel must use tricks to access this memory, making it slower to access than lowmem.",
+        "notes": "Starting with Linux 2.6.19, the kernel must be configured with CONFIG_HIGHMEM to show this metric. The maximum value is the total amount of high memory.",
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
@@ -359,8 +359,8 @@
         "dataType": "integer",
         "type": "raw",
         "formula": null,
-        "description": "The total amount of highmem, RAM that is above approximately 860MB used for user processes or the page cache. The kernel must use tricks to access this memory, making it slower to access than lowmem.",
-        "notes": "Starting with Linux 2.6.19, kernel must be configured with CONFIG_HIGHMEM to show this metric. The maximum value is the total amount of usable RAM (total RAM less a few reserved bits and the kernel binary code) less the total amount of low memory.",
+        "description": "The total amount of highmem RAM that is above approximately 860MB used for user processes or the page cache. The kernel must use tricks to access this memory, making it slower to access than lowmem.",
+        "notes": "Starting with Linux 2.6.19, the kernel must be configured with CONFIG_HIGHMEM to show this metric. The maximum value is the total amount of usable RAM (total RAM minus a few reserved bits and the kernel binary code) minus the total amount of low memory.",
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
@@ -381,7 +381,7 @@
         "type": "raw",
         "formula": null,
         "description": "The number of huge pages in the pool of huge pages that are not yet allocated.",
-        "notes": "Linux kernel must be configured with CONFIG_HUGETLB_PAGE to show this metric. The maximum value is the total amount of huge pages.",
+        "notes": "The Linux kernel must be configured with CONFIG_HUGETLB_PAGE to show this metric. The maximum value is the total amount of huge pages.",
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
@@ -402,7 +402,7 @@
         "type": "raw",
         "formula": null,
         "description": "The number of huge pages for which a commitment to allocate from the pool of huge pages has been made, but no allocation has yet been made. These reserved huge pages guarantee that a process will be able to allocate a huge page from the pool at fault time (when the process accesses the memory).",
-        "notes": "Linux kernel must be configured with CONFIG_HUGETLB_PAGE to show this metric. The maximum value is the total amount of huge pages.",
+        "notes": "The Linux kernel must be configured with CONFIG_HUGETLB_PAGE to show this metric. The maximum value is the total amount of huge pages.",
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
@@ -423,7 +423,7 @@
         "type": "raw",
         "formula": null,
         "description": "The number of huge pages above the current number of 'persistent' huge pages in the kernel's pool of huge pages.",
-        "notes": "Linux kernel must be configured with CONFIG_HUGETLB_PAGE to show this metric. The maximum value is set by /proc/sys/vm/nr_overcommit_hugepages.",
+        "notes": "The Linux kernel must be configured with CONFIG_HUGETLB_PAGE to show this metric. The maximum value is set by /proc/sys/vm/nr_overcommit_hugepages.",
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
@@ -444,7 +444,7 @@
         "type": "raw",
         "formula": null,
         "description": "The total number of huge pages in the pool of huge pages.",
-        "notes": "Linux kernel must be configured with CONFIG_HUGETLB_PAGE to show this metric.",
+        "notes": "The Linux kernel must be configured with CONFIG_HUGETLB_PAGE to show this metric.",
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
@@ -465,7 +465,7 @@
         "type": "raw",
         "formula": null,
         "description": "The size of huge pages.",
-        "notes": "Linux kernel must be configured with CONFIG_HUGETLB_PAGE to show this metric.",
+        "notes": "The Linux kernel must be configured with CONFIG_HUGETLB_PAGE to show this metric.",
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
@@ -506,7 +506,7 @@
         "dataType": "integer",
         "type": "raw",
         "formula": null,
-        "description": "The amount of inactive memory that is not mapped to the filesystem, and exists in an anonymous region in memory such as a process' stack or heap space. Inactive memory is memory which has been less recently used and more eligible to be reclaimed for other purposes.",
+        "description": "The amount of inactive memory that is not mapped to the filesystem and exists in an anonymous region in memory such as a process' stack or heap space. Inactive memory is memory which has been less recently used and more eligible to be reclaimed for other purposes.",
         "notes": "The maximum value is the total amount of inactive memory.",
         "platforms": {
             "linux": ["/proc/meminfo"]
