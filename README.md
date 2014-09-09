@@ -91,7 +91,7 @@ Min | Max | Units | Metric Type | Data Type
 
 The amount of memory presently allocated to processes on the system, and henceforth the maximum amount of memory that these processes may use. With strict overcommit enabled on the system (mode 2 in `vm.overcommit_memory` or `/proc/sys/vm/overcommit_memory`), allocations which would exceed the `CommitLimit` will not be permitted. This is useful if one needs to guarantee that processes will not fail due to lack of memory once that memory has been successfully allocated.
 
-Note: the maximum value is the `CommitLimit` (if strict overcommit accounting is enabled, which is mode 2 in 'vm.overcommit_memory' or '/proc/sys/vm/overcommit_memory').
+Note: the maximum value is the `CommitLimit` (if strict overcommit accounting is enabled, which is mode 2 in `vm.overcommit_memory` or `/proc/sys/vm/overcommit_memory`).
 
 Min | Max | Units | Metric Type | Data Type 
 :---: | :---: | :---: | ---: | ---: |
