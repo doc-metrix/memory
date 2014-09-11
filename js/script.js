@@ -81,7 +81,10 @@
 		// Use jQuery to select the table sibling following our metric of interest. We will insert the formula just after the table.
 		for ( var j = 0; j < cache.length; j++ ) {
 			name = cache[ j ].name;
-			el = $( 'a[name="'+name+'"]' ).parent().next( 'table' );
+			el = $( 'a[name="'+name+'"]' )
+				.parent()
+				.nextUntil( 'table' )
+				.next();
 			el.before( '<p>Hello\n\n</p>' );
 		}
 
