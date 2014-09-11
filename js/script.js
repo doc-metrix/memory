@@ -3,7 +3,7 @@
 	'use strict';
 
 	getResource( "https://api.github.com/repos/doc-metrix/memory/contents/spec/index.json", function onSpec( spec ) {
-		console.log( spec );
+		console.log( window.atob( JSON.parse( spec ).content ) );
 	});
 
 	// FUNCTIONS //
