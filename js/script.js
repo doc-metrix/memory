@@ -83,7 +83,7 @@
 		// Use jQuery to select the table sibling following our metric of interest. We will insert the formula just before the table.
 		for ( var j = 0; j < cache.length; j++ ) {
 			name = cache[ j ].name;
-			eqn = cache[ j ].equation;
+			formula = cache[ j ].formula;
 
 			el = $( 'a[name="'+name+'"]' )
 				.parent()
@@ -91,9 +91,9 @@
 
 			script = document.createElement( 'script' );
 			script.type = 'math/tex; mode=display';
-			script.text = eqn;
+			script.text = formula.equation;
 
-			el[ 0 ].appendChild( script );
+			el.after( script );
 		}
 
 	} // end FUNCTION getFormulas()
