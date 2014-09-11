@@ -1026,11 +1026,11 @@
             "equation": "\\frac{swap_{total} - swap_{free}}{swap_{total}}",
             "variables": {
                 "swap_{free}": {
-                    "description": "The amount of free swap disk.",
+                    "description": "the amount of free swap disk",
                     "reference": "https://github.com/doc-metrix/memory"
                 },
                 "swap_{total}": {
-                    "description": "The total amount of swap disk.",
+                    "description": "the total amount of swap disk",
                     "reference": "https://github.com/doc-metrix/memory"
                 }
             }
@@ -1059,11 +1059,11 @@
             "equation": "\\frac{RAM_{total} - RAM_{free}}{RAM_{total}}",
             "variables": {
                 "RAM_{free}": {
-                    "description": "The amount of free RAM.",
+                    "description": "the amount of free RAM",
                     "reference": "https://github.com/doc-metrix/memory"
                 },
                 "RAM_{total}": {
-                    "description": "The total amount of usable RAM.",
+                    "description": "the total amount of usable RAM",
                     "reference": "https://github.com/doc-metrix/memory"
                 }
             }
@@ -1092,11 +1092,11 @@
             "equation": "\\frac{virtualMemory_{used}}{virtualMemory_{total}}",
             "variables": {
                 "virtualMemory_{used}": {
-                    "description": "The amount of space that have been virtually memory allocated.",
+                    "description": "the amount of space that have been virtually memory allocated",
                     "reference": "https://github.com/doc-metrix/memory"
                 },
                 "virtualMemory_{total}": {
-                    "description": "The total amount of space reserved for virtual memory allocation.",
+                    "description": "the total amount of space reserved for virtual memory allocation",
                     "reference": "https://github.com/doc-metrix/memory"
                 }
             }
