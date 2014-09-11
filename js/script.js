@@ -96,6 +96,9 @@
 			el.parentNode.insertBefore( script, el.nextSibling );
 		}
 
+		// Render all MathJax content:
+		MathJax.Hub.Queue( ['Typeset', MathJax.Hub] );
+
 	} // end FUNCTION getFormulas()
 
 })();
