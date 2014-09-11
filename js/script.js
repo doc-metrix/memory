@@ -91,7 +91,7 @@
 
 			script = document.createElement( 'script' );
 			script.type = 'math/tex; mode=display';
-			script.content = eqn;
+			script.text = eqn;
 
 			el[ 0 ].appendChild( script );
 		}
