@@ -93,7 +93,7 @@
 			script.type = 'math/tex; mode=display';
 			script.content = eqn;
 
-			el.appendChild( script );
+			el[ 0 ].appendChild( script );
 		}
 
 	} // end FUNCTION getFormulas()
