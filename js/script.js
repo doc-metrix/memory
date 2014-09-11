@@ -116,7 +116,7 @@
 			for ( var k = 0; k < numKeys; k++ ) {
 				name = keys[ k ];
 
-				text += '$$' + name + '$$ is ' + variables[ name ].description;
+				text += '\(' + name + '\) is ' + variables[ name ].description;
 
 				if ( k < numKeys-1 && numKeys > 2 ) {
 					text += ', ';
