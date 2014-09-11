@@ -2,7 +2,7 @@
 (function() {
 	'use strict';
 
-	getResource( "https://raw.githubusercontent.com/doc-metrix/memory/master/spec/index.json", function onSpec( spec ) {
+	getResource( "https://github.com/doc-metrix/memory/spec/index.json", function onSpec( spec ) {
 		console.log( JSON.parse( spec ) );
 	});
 
