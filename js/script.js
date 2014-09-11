@@ -60,9 +60,13 @@
 			name,
 			metric,
 			formula,
+			variables,
 			el,
+			parent,
 			eqn,
-			script;
+			script,
+			p,
+			text;
 
 		// Slugify the keys, lowercase, and extract the formula:
 		for ( var i = 0; i < keys.length; i++ ) {
@@ -84,17 +88,49 @@
 		for ( var j = 0; j < cache.length; j++ ) {
 			name = cache[ j ].name;
 			formula = cache[ j ].formula;
+			variables = cache[ j ].variables;
 
+			// Get where in the DOM tree we want to place the equation:
 			el = $( 'a[name="'+name+'"]' )
 				.parent()
 				.nextUntil( 'table' )[ 0 ];
 
+			// Insert the formula:
 			script = document.createElement( 'script' );
 			script.type = 'math/tex; mode=display';
-			script.text = formula.equation;
+			script.text = 'x = ' + formula.equation;
 
-			el.parentNode.insertBefore( script, el.nextSibling );
-		}
+			parent = el.parentNode;
+
+			parent.insertBefore( script, el.nextSibling );
+
+			// Step to the next sibling (i.e., the recently created script):
+			el = el.nextSibling;
+
+			// Generate the `variables` explanation...
+			text = 'where ';
+
+			keys = Object.keys( variables );
+			for ( var k = 0; k < keys.length; k++ ) {
+				name = keys[ k ];
+
+				text += '$' + name + '$ is ' + variables[ name ].description;
+
+				if ( k < keys.length-1 ) {
+					text += ', ';
+				}
+				if ( k === keys.length - 2 ) {
+					text += 'and ';
+				}
+				if ( k === keys.length - 1 ) {
+					text += '.';
+				}
+			}
+
+			p = document.createElement( 'p' );
+			p.innerHTML = text;
+
+		} // end FOR j
 
 		// Render all MathJax content:
 		MathJax.Hub.Queue( ['Typeset', MathJax.Hub] );
