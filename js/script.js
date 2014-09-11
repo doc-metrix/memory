@@ -61,7 +61,8 @@
 			metric,
 			formula,
 			el,
-			script;
+			script,
+			eqn;
 
 		// Slugify the keys, lowercase, and extract the formula:
 		for ( var i = 0; i < keys.length; i++ ) {
@@ -82,7 +83,7 @@
 		// Use jQuery to select the table sibling following our metric of interest. We will insert the formula just before the table.
 		for ( var j = 0; j < cache.length; j++ ) {
 			name = cache[ j ].name;
-			formula = cache[ j ].equation;
+			eqn = cache[ j ].equation;
 
 			el = $( 'a[name="'+name+'"]' )
 				.parent()
@@ -90,7 +91,7 @@
 
 			script = document.createElement( 'script' );
 			script.type = 'math/tex; mode=display';
-			script.content = equation;
+			script.content = eqn;
 
 			el.appendChild( script );
 		}
