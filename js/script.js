@@ -118,6 +118,9 @@
 
 				text += '\\(' + name + '\\) is ' + variables[ name ].description;
 
+				if ( numKeys <= 2 ) {
+					text += ' ';
+				}
 				if ( k < numKeys-1 && numKeys > 2 ) {
 					text += ', ';
 				}
