@@ -2,8 +2,8 @@
 (function() {
 	'use strict';
 
-	getResource( "https://github.com/doc-metrix/memory/spec/index.json", function onSpec( spec ) {
-		console.log( JSON.parse( spec ) );
+	getResource( "https://api.github.com/repos/doc-metrix/memory/contents/spec/index.json", function onSpec( spec ) {
+		console.log( spec );
 	});
 
 	// FUNCTIONS //
