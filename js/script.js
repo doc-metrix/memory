@@ -66,7 +66,8 @@
 			eqn,
 			script,
 			p,
-			text;
+			text,
+			numKeys;
 
 		// Slugify the keys, lowercase, and extract the formula:
 		for ( var i = 0; i < keys.length; i++ ) {
@@ -111,18 +112,19 @@
 			text = 'where ';
 
 			keys = Object.keys( variables );
-			for ( var k = 0; k < keys.length; k++ ) {
+			numKeys = keys.length;
+			for ( var k = 0; k < numKeys; k++ ) {
 				name = keys[ k ];
 
-				text += '$' + name + '$ is ' + variables[ name ].description;
+				text += '$$' + name + '$$ is ' + variables[ name ].description;
 
-				if ( k < keys.length-1 ) {
+				if ( k < numKeys-1 && numKeys > 2 ) {
 					text += ', ';
 				}
-				if ( k === keys.length - 2 ) {
+				if ( k === numKeys - 2 ) {
 					text += 'and ';
 				}
-				if ( k === keys.length - 1 ) {
+				if ( k === numKeys - 1 ) {
 					text += '.';
 				}
 			}
