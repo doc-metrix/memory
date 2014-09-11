@@ -61,7 +61,8 @@
 			metric,
 			formula,
 			el,
-			eqn;
+			eqn,
+			script;
 
 		// Slugify the keys, lowercase, and extract the formula:
 		for ( var i = 0; i < keys.length; i++ ) {
