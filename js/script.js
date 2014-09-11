@@ -88,7 +88,7 @@
 		for ( var j = 0; j < cache.length; j++ ) {
 			name = cache[ j ].name;
 			formula = cache[ j ].formula;
-			variables = cache[ j ].variables;
+			variables = formula.variables;
 
 			// Get where in the DOM tree we want to place the equation:
 			el = $( 'a[name="'+name+'"]' )
