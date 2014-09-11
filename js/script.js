@@ -130,6 +130,8 @@
 			p = document.createElement( 'p' );
 			p.innerHTML = text;
 
+			parent.insertBefore( p, el.nextSibling );
+
 		} // end FOR j
 
 		// Render all MathJax content:
