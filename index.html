@@ -1,0 +1,1205 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Memory Performance Metrics by doc-metrix</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Memory Performance Metrics</h1>
+        <p>Specification for memory performance metrics.</p>
+
+        <p class="view"><a href="https://github.com/doc-metrix/memory">View the Project on GitHub <small>doc-metrix/memory</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/doc-metrix/memory/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/doc-metrix/memory/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/doc-metrix/memory">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="memory" class="anchor" href="#memory"><span class="octicon octicon-link"></span></a>Memory</h1>
+
+<blockquote>
+<p>A specification for memory performance metrics.</p>
+</blockquote>
+
+<h2>
+<a name="metrics" class="anchor" href="#metrics"><span class="octicon octicon-link"></span></a>Metrics</h2>
+
+<h4>
+<a name="memactive" class="anchor" href="#memactive"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.active</a>
+</h4>
+
+<p>The amount of memory that has been used more recently and usually will not be reclaimed unless absolute necessary.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memactiveanon" class="anchor" href="#memactiveanon"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.activeAnon</a>
+</h4>
+
+<p>The amount of active memory that is not mapped to the filesystem and exists in an anonymous region in memory, such as a process' stack or heap space.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memactivefile" class="anchor" href="#memactivefile"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.activeFile</a>
+</h4>
+
+<p>The amount of active memory that is mapped to the filesystem.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memanonhugepages" class="anchor" href="#memanonhugepages"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.anonHugePages</a>
+</h4>
+
+<p>The number of pages larger than the system's default page size. These pages are not backed to the filsystem and have been mapped to user processes.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memanonpages" class="anchor" href="#memanonpages"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.anonPages</a>
+</h4>
+
+<p>The number of pages that are not backed to the filesystem and have been mapped to user processes.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="membounce" class="anchor" href="#membounce"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.bounce</a>
+</h4>
+
+<p>The amount of RAM that is used as buffers for data streams between memory and devices (such as SCSI and PCI devices).</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="membuffers" class="anchor" href="#membuffers"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.buffers</a>
+</h4>
+
+<p>The amount of memory used as buffers for storing filesystem metadata when disks are accessed. For example, when a file is accessed, the content of the file is stored in the page cache while the file metadata, such as file permissions, are stored in buffers.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memcached" class="anchor" href="#memcached"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.cached</a>
+</h4>
+
+<p>The amount of memory used for the page cache to store the files when reading from or writing to disk. Does not include <a href="#mem.swapCached">mem.swapCached</a>.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memcommitlimit" class="anchor" href="#memcommitlimit"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.commitLimit</a>
+</h4>
+
+<p>The total amount of memory currently available to be allocated on the system based on the <code>overcommit_ratio</code> (<code>vm.overcommit_ratio</code> or <code>/proc/sys/vm/overcommit_ratio</code>). The metric is calculated by <code>(total usable RAM * overcommit ratio) + the total swap disk size</code>. This limit is only adhered to if strict overcommit accounting is enabled (mode 2 in <code>vm.overcommit_memory</code> or <code>/proc/sys/vm/overcommit_memory</code>). For example, on a system with 1GB of RAM and 7GB of swap with an <code>overcommit_ratio</code> of 30, the <code>CommitLimit</code> is 7.3GB.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center"><code>null</code></td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memcommitedas" class="anchor" href="#memcommitedas"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.commitedAS</a>
+</h4>
+
+<p>The amount of memory presently allocated to processes on the system, and henceforth the maximum amount of memory that these processes may use. With strict overcommit enabled on the system (mode 2 in <code>vm.overcommit_memory</code> or <code>/proc/sys/vm/overcommit_memory</code>), allocations which would exceed the <code>CommitLimit</code> will not be permitted. This is useful if one needs to guarantee that processes will not fail due to lack of memory once that memory has been successfully allocated.</p>
+
+<p>Note: the maximum value is the <code>CommitLimit</code> (if strict overcommit accounting is enabled, which is mode 2 in <code>vm.overcommit_memory</code> or <code>/proc/sys/vm/overcommit_memory</code>).</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memdirectmap1g" class="anchor" href="#memdirectmap1g"><span class="octicon octicon-link"></span></a><a href="http://wiki.fcctt.org/index.php?title=FC39Understanding_Virtual_Memory_Statistics_in_/proc/meminfo/en">mem.directMap1G</a>
+</h4>
+
+<p>The amount of RAM that is mapped using a 1GB page size.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memdirectmap2m" class="anchor" href="#memdirectmap2m"><span class="octicon octicon-link"></span></a><a href="http://wiki.fcctt.org/index.php?title=FC39Understanding_Virtual_Memory_Statistics_in_/proc/meminfo/en">mem.directMap2M</a>
+</h4>
+
+<p>The amount of RAM that is mapped using a 2MB page size.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memdirectmap4k" class="anchor" href="#memdirectmap4k"><span class="octicon octicon-link"></span></a><a href="http://wiki.fcctt.org/index.php?title=FC39Understanding_Virtual_Memory_Statistics_in_/proc/meminfo/en">mem.directMap4K</a>
+</h4>
+
+<p>The amount of RAM that is mapped using a 4KB page size.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memdirty" class="anchor" href="#memdirty"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.dirty</a>
+</h4>
+
+<p>The number of pages in RAM that differ from their corresponding data on disk (for example, as a result of asychronous disk write). A large number of dirty pages means many disk writes have not completed.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memhardwarecorrupted" class="anchor" href="#memhardwarecorrupted"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.hardwareCorrupted</a>
+</h4>
+
+<p>The amount of memory that has been corrupted.</p>
+
+<p>Note: the Linux kernel must be configured with <code>CONFIG_MEMORY_FAILIRE</code> to show this metric.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memhighfree" class="anchor" href="#memhighfree"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.highFree</a>
+</h4>
+
+<p>The amount of free highmem RAM that is above approximately 860MB used for user processes or the page cache. The kernel must use tricks to access this memory, making it slower to access than lowmem.</p>
+
+<p>Note: Starting with Linux <code>2.6.19</code>, the kernel must be configured with <code>CONFIG_HIGHMEM</code> to show this metric. The maximum value is the total amount of high memory.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memhightotal" class="anchor" href="#memhightotal"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.highTotal</a>
+</h4>
+
+<p>The total amount of highmem RAM that is above approximately 860MB used for user processes or the page cache. The kernel must use tricks to access this memory, making it slower to access than lowmem.</p>
+
+<p>Note: Starting with Linux <code>2.6.19</code>, the kernel must be configured with <code>CONFIG_HIGHMEM</code> to show this metric. The maximum value is the total amount of usable RAM (total RAM minus a few reserved bits and the kernel binary code) minus the total amount of low memory.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memhugepagesfree" class="anchor" href="#memhugepagesfree"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.hugePagesFree</a>
+</h4>
+
+<p>The number of huge pages in the pool of huge pages that are not yet allocated.</p>
+
+<p>Note: The Linux kernel must be configured with <code>CONFIG_HUGETLB_PAGE</code> to show this metric. The maximum value is the total amount of huge pages.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#hugepages">hugepages</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memhugepagesrsvd" class="anchor" href="#memhugepagesrsvd"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.hugePagesRsvd</a>
+</h4>
+
+<p>The number of huge pages for which a commitment to allocate from the pool of huge pages has been made, but no allocation has yet been made. These reserved huge pages guarantee that a process will be able to allocate a huge page from the pool at fault time (when the process accesses the memory).</p>
+
+<p>Note: The Linux kernel must be configured with <code>CONFIG_HUGETLB_PAGE</code> to show this metric. The maximum value is the total amount of huge pages.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#hugepages">hugepages</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memhugepagessurp" class="anchor" href="#memhugepagessurp"><span class="octicon octicon-link"></span></a><a href="https://www.kernel.org/doc/Documentation/vm/hugetlbpage.txt">mem.hugePagesSurp</a>
+</h4>
+
+<p>The number of huge pages above the current number of 'persistent' huge pages in the kernel's pool of huge pages.</p>
+
+<p>Note: The Linux kernel must be configured with <code>CONFIG_HUGETLB_PAGE</code> to show this metric. The maximum value is set by <code>/proc/sys/vm/nr_overcommit_hugepages</code>.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#hugepages">hugepages</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memhugepagestotal" class="anchor" href="#memhugepagestotal"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.hugePagesTotal</a>
+</h4>
+
+<p>The total number of huge pages in the pool of huge pages.</p>
+
+<p>Note: The Linux kernel must be configured with <code>CONFIG_HUGETLB_PAGE</code> to show this metric.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#hugepages">hugepages</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memhugepagesize" class="anchor" href="#memhugepagesize"><span class="octicon octicon-link"></span></a><a href="https://www.kernel.org/doc/Documentation/vm/hugetlbpage.txt">mem.hugePageSize</a>
+</h4>
+
+<p>The size of huge pages.</p>
+
+<p>Note: The Linux kernel must be configured with <code>CONFIG_HUGETLB_PAGE</code> to show this metric.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="meminactive" class="anchor" href="#meminactive"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.inactive</a>
+</h4>
+
+<p>The amount of memory which has been less recently used. It is more eligible to be reclaimed for other purposes.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="meminactiveanon" class="anchor" href="#meminactiveanon"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.inactiveAnon</a>
+</h4>
+
+<p>The amount of inactive memory that is not mapped to the filesystem and exists in an anonymous region in memory such as a process' stack or heap space. Inactive memory is memory which has been less recently used and more eligible to be reclaimed for other purposes.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="meminactivefile" class="anchor" href="#meminactivefile"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.inactiveFile</a>
+</h4>
+
+<p>The amount of inactive memory that is mapped to the filesystem. Inactive memory is memory which has been less recently used and more eligible to be reclaimed for other purposes.</p>
+
+<p>Note: The maximum value is the total amount of inactive memory.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memkernelstack" class="anchor" href="#memkernelstack"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.kernelStack</a>
+</h4>
+
+<p>The amount of memory allocated to kernel stacks. The more processes running on the system, the more kernel stacks are allocated.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memlowfree" class="anchor" href="#memlowfree"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.lowFree</a>
+</h4>
+
+<p>The amount of free lowmem RAM which can be used for everything that highmem can be used for, but is also available for the kernel to use for its own data structures. Among many other things, it is where everything from Slab is allocated.</p>
+
+<p>Note: Starting with Linux <code>2.6.19</code>, the kernel must be configured with <code>CONFIG_HIGHMEM</code> to show this metric. The maximum is the total amount of low memory.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memlowtotal" class="anchor" href="#memlowtotal"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.lowTotal</a>
+</h4>
+
+<p>The total amount of lowmem RAM which can be used for everything that highmem can be used for, but is also available for the kernel to use for its own data structures. Among many other things, it is where everything from Slab is allocated.</p>
+
+<p>Note: Starting with Linux <code>2.6.19</code>, the kernel must be configured with <code>CONFIG_HIGHMEM</code> to show this metric.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memmapped" class="anchor" href="#memmapped"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.mapped</a>
+</h4>
+
+<p>The total amount of file content which have already been mapped inside a process' address space and have been paged-in (swapped from disk to RAM).</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memmemfree" class="anchor" href="#memmemfree"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.memFree</a>
+</h4>
+
+<p>The total amount of free lowmem and free highmem.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memmemtotal" class="anchor" href="#memmemtotal"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.memTotal</a>
+</h4>
+
+<p>The total amount of usable RAM (total RAM minus a few reserved bits and the kernel binary code).</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memmlocked" class="anchor" href="#memmlocked"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.mlocked</a>
+</h4>
+
+<p>The amount of allocated memory that is strictly prohibited from being paged-out (swapped from RAM to disk). Since this memory cannot be swapped out, major page faults will not happen. Therefore, memory access time is guaranteed to be as fast as possible. Certain processes, such as those related to interactive user experience requiring a real time response, may be mlocked to ensure quality experience.</p>
+
+<p>Note: From Linux <code>2.6.28</code> to <code>2.6.30</code>, kernel must be configured with <code>CONFIG_UNEVICTABLE_LRU</code> to show this metric.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memnfsunstable" class="anchor" href="#memnfsunstable"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.nfsUnstable</a>
+</h4>
+
+<p>The amount of network file system (NFS) pages sent to the server, but has not yet been written to disk.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="mempagetables" class="anchor" href="#mempagetables"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.pageTables</a>
+</h4>
+
+<p>The amount of memory used by page tables (mappings from virtual memory addresses to RAM addresses).</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memsreclaimable" class="anchor" href="#memsreclaimable"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.sReclaimable</a>
+</h4>
+
+<p>The amount of slab that may be reclaimed, such as caches. Slab is cache that is dedicated for kernel data structures.</p>
+
+<p>Note: The maximum value is the total amount of slab memory.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memsunreclaim" class="anchor" href="#memsunreclaim"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.sUnreclaim</a>
+</h4>
+
+<p>The amount of slab that cannot be reclaimed when memory needs to be freed. Slab is cache that is dedicated for kernel data structures.</p>
+
+<p>Note: The maximum value is the total amount of slab memory.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memshmem" class="anchor" href="#memshmem"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.shMem</a>
+</h4>
+
+<p>The amount of shared memory used by group(s) processes. For example, pages allocated for System V IPC (Inter Process Communication).</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memslab" class="anchor" href="#memslab"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.slab</a>
+</h4>
+
+<p>The amount of memory used to cache kernel data structures.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memswapcached" class="anchor" href="#memswapcached"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.swapCached</a>
+</h4>
+
+<p>The amount of memory that was once paged-out and is now paged-in, but still exists in the swap file. If memory needs to be freed, these pages will not need to be paged-out again because they are already in the swap file. This saves I/O.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memswapfree" class="anchor" href="#memswapfree"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.swapFree</a>
+</h4>
+
+<p>The amount of swap space that is currently unused.</p>
+
+<p>Note: The maximum value is the total amount of swap memory.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memswaptotal" class="anchor" href="#memswaptotal"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.swapTotal</a>
+</h4>
+
+<p>The total amount of swap space available.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memunevictable" class="anchor" href="#memunevictable"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.unevictable</a>
+</h4>
+
+<p>The amount of pages that cannot be paged-out of RAM. Unevictable is a superset of mlocked.</p>
+
+<p>Note: From Linux <code>2.6.28</code> to <code>2.6.30</code>, kernel must be configured with <code>CONFIG_UNEVICTABLE_LRU</code> to show this metric.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memvmallacchunk" class="anchor" href="#memvmallacchunk"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.vmallacChunk</a>
+</h4>
+
+<p>The amount of memory in the largest contiguous block of virtual memory address space that is available for a new virtual memory mapping.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memvmalloctotal" class="anchor" href="#memvmalloctotal"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.vmallocTotal</a>
+</h4>
+
+<p>The total amount of reserved space for virtual memory allocation.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memvmallocused" class="anchor" href="#memvmallocused"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.vmallocUsed</a>
+</h4>
+
+<p>The amount of pages which have been virtually memory allocated.</p>
+
+<p>Note: The maximum value is the total amount of reserved space for virtual memory allocation.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memwriteback" class="anchor" href="#memwriteback"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.writeBack</a>
+</h4>
+
+<p>The amount of dirty pages in RAM currently being written back to disk.</p>
+
+<p>Note: The maximum value is the total amount of dirty pages.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memwritebacktmp" class="anchor" href="#memwritebacktmp"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.writeBackTmp</a>
+</h4>
+
+<p>The amount of memory used by filesystem on user space (FUSE) for temporary writeback buffers.</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center"><code>null</code></td>
+<td align="center"><a href="https://github.com/doc-metrix/units#kb">KB</a></td>
+<td align="right">raw</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#integer">integer</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memswapspaceutilization" class="anchor" href="#memswapspaceutilization"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.swapSpaceUtilization</a>
+</h4>
+
+<p>The decimal percentage of swap disk space being used (swap disk used divided by total swap disk size).</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center"><a href="https://github.com/doc-metrix/units#utilization">utilization</a></td>
+<td align="right">derived</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#percentage">percentage</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memramspaceutilization" class="anchor" href="#memramspaceutilization"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.ramSpaceUtilization</a>
+</h4>
+
+<p>The decimal percentage of RAM being used (RAM used divided by total usable RAM, i.e., total RAM minus a few reserved bits and the kernel binary code).</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center"><a href="https://github.com/doc-metrix/units#utilization">utilization</a></td>
+<td align="right">derived</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#percentage">percentage</a></td>
+</tr></tbody>
+</table><h4>
+<a name="memvirtualspaceutilization" class="anchor" href="#memvirtualspaceutilization"><span class="octicon octicon-link"></span></a><a href="http://linux.die.net/man/5/proc">mem.virtualSpaceUtilization</a>
+</h4>
+
+<p>The decimal percentage of virtual memory space being used (allocated virtual memory space divided by total space reserved for virtual memory allocation).</p>
+
+<table>
+<thead><tr>
+<th align="center">Min</th>
+<th align="center">Max</th>
+<th align="center">Units</th>
+<th align="right">Metric Type</th>
+<th align="right">Data Type</th>
+</tr></thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center"><a href="https://github.com/doc-metrix/units#utilization">utilization</a></td>
+<td align="right">derived</td>
+<td align="right"><a href="https://github.com/doc-metrix/data-types#percentage">percentage</a></td>
+</tr></tbody>
+</table><h1></h1>
+
+<h2>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<p>To contribute to this specification, see the contributing <a href="https://github.com/doc-metrix/contributing">guide</a>. Any updates to the specification should be tagged.</p>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>git tag -a &lt;major.minor.patch&gt; -m <span class="s2">"[UPDATE] version."</span>
+<span class="nv">$ </span>git push origin &lt;major.minor.patch&gt;
+</pre></div>
+
+<p>Use <a href="http://semver.org/">semantic versioning</a> (semvar) for communicating versions.</p>
+
+<ul>
+<li>  Any new metrics should be communicated as <code>minor</code> updates.</li>
+<li>  Any corrections/value modifications should be <code>patches</code>.</li>
+<li>  Any specification restructuring (changing field names, removing fields, etc) should be communicated as a <code>major</code> update.</li>
+</ul><h1></h1>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>The specification is stored as <a href="http://json.org/">JSON</a>, a lightweight data-interchange format. Many languages provide JSON support: <a href="http://www.json.org/js.html">JavaScript</a>, <a href="https://docs.python.org/2/library/json.html">Python</a>, <a href="http://golang.org/pkg/encoding/json/">Go</a>, <a href="http://php.net/manual/en/book.json.php">PHP</a>, <a href="http://json.org/java/">Java</a>, <a href="http://hackage.haskell.org/package/json">Haskell</a>, and <a href="http://json.org/">others</a>.</p>
+
+<p>You are free to use the JSON specification, as is. Simply copy the file and use accordingly.</p>
+
+<p>For those using package managers to manage dependencies, we provide package manager support, as outlined below.</p>
+
+<h3>
+<a name="bower" class="anchor" href="#bower"><span class="octicon octicon-link"></span></a>Bower</h3>
+
+<p>The specification is registered as a <a href="http://bower.io">Bower</a> package. Bower provides a straightforward means for managing dependencies.</p>
+
+<p>In order to use Bower, you must first install <a href="http://nodejs.org/">Node.js</a> and <a href="http://git-scm.com/book/en/Getting-Started-Installing-Git">Git</a>. Once the prerequisites are installed,</p>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>npm install -g bower
+</pre></div>
+
+<p>To <a href="http://bower.io/docs/api/#install">install</a> the latest specification,</p>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>bower install doc-metrix-memory
+</pre></div>
+
+<p>Bower will place the specification in a <code>bower_components/</code> directory within the current working directory.</p>
+
+<p>To <a href="http://bower.io/docs/api/#update">update</a> to the latest specification,</p>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>bower update doc-metrix-memory
+</pre></div>
+
+<h3>
+<a name="utilities" class="anchor" href="#utilities"><span class="octicon octicon-link"></span></a>Utilities</h3>
+
+<p>List of utilities using this specification:</p>
+
+<ul>
+<li>  <a href="https://github.com/doc-metrix/memory-node">Node.js</a>
+</li>
+</ul><hr><h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p><a href="http://opensource.org/licenses/MIT">MIT license</a>. </p>
+
+<hr><h2>
+<a name="copyright" class="anchor" href="#copyright"><span class="octicon octicon-link"></span></a>Copyright</h2>
+
+<p>Copyright © 2014. NodePrime.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/doc-metrix">doc-metrix</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
