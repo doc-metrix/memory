@@ -61,7 +61,6 @@
 			metric,
 			formula,
 			el,
-			script,
 			eqn;
 
 		// Slugify the keys, lowercase, and extract the formula:
@@ -89,9 +88,7 @@
 				.parent()
 				.nextUntil( 'table' );
 
-			script = document.createElement( 'script' );
-			script.type = 'math/tex; mode=display';
-			script.text = formula.equation;
+			script = '<script type="math/tex; mode=display">' + formula.equation + '</script>';
 
 			el.after( script );
 		}
