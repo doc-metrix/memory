@@ -43,7 +43,7 @@
 	* @param {String} blob - content blob which will be parsed as JSON
 	*/
 	function onSpec( blob ) {
-		var spec = window.atob( JSON.parse( blob ).content );
+		var spec = JSON.parse( window.atob( JSON.parse( blob ).content ) );
 		getFormulas( spec );
 	} // end FUNCTION onSpec()
 
