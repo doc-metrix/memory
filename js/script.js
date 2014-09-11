@@ -86,11 +86,13 @@
 
 			el = $( 'a[name="'+name+'"]' )
 				.parent()
-				.nextUntil( 'table' );
+				.nextUntil( 'table' )[ 0 ];
 
-			script = '<script type="math/tex; mode=display">' + formula.equation + '</script>';
+			script = document.createElement( 'script' );
+			script.type = 'math/tex; mode=display';
+			script.text = formula.equation;
 
-			el.after( script );
+			el.parentNode.insertBefore( script, el.nextSibling );
 		}
 
 	} // end FUNCTION getFormulas()
