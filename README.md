@@ -578,5 +578,5 @@ List of utilities using this specification:
 ---
 ## Copyright
 
-Copyright &copy; 2014. NodePrime.
+Copyright &copy; 2014. [NodePrime](http://nodeprime.com).
 
