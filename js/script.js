@@ -36,6 +36,38 @@
 	} // end FUNCTION getResource()
 
 	/**
+	* FUNCTION: postResource( url, data, clbk )
+	*	Post data to a resource at a provided URL and return the response to a provided callback.
+	*
+	* @param {string} url - resource location
+	* @param {object} data - data to be sent to location
+	* @param {function} clbk - callback to invoke upon response receipt. Function should accept one input argument: [ result ]
+	*/
+	function postResource( url, data, clbk ) {
+		var xhr;
+		if ( url && clbk ) {
+			// Create a new request object:
+			xhr = new XMLHttpRequest();
+
+			// Open the request connection:
+			xhr.open( 'POST', url, true );
+
+			// Set the request header:
+			xhr.setRequestHeader( 'Content-Type', 'application/json' );
+
+			// Define the state change callback:
+			xhr.onreadystatechange = function () {
+				if ( xhr.readyState != 4 || xhr.status != 200 ){
+					return;
+				}
+				clbk( xhr.responseText );
+			};
+			// Send the request:
+			xhr.send( data );
+		} // end IF (parameters)
+	} // end FUNCTION postResource()
+
+	/**
 	* FUNCTION: onReadme( blob )
 	*	Handler for receiving a README resource.
 	*
@@ -44,8 +76,28 @@
 	*/
 	function onReadme( blob ) {
 		var content = window.atob( JSON.parse( blob ).content );
-		render( content );
+		render( escape( content ) );
 	} // end FUNCTION onReadme()
+
+	/**
+	* FUNCTION: escape( text )
+	*	Escapes text.
+	*
+	* @private
+	* @param {String} text - text to be escaped
+	* @returns {String} escaped text
+	*/
+	function escape( text ) {
+		return text
+			.replace( /[\\]/g, '\\\\' )
+			.replace( /[\"]/g, '\\\"' )
+			.replace( /[\/]/g, '\\/' )
+			.replace( /[\b]/g, '\\b' )
+			.replace( /[\f]/g, '\\f' )
+			.replace( /[\n]/g, '\\n' )
+			.replace( /[\r]/g, '\\r' )
+			.replace( /[\t]/g, '\\t' );
+	} // end FUNCTION escape()
 
 	/**
 	* FUNCTION: render( content )
@@ -55,10 +107,26 @@
 	* @param {String} content - Markdown to render
 	*/
 	function render( content ) {
-		var html = marked( content );
+		content = {
+			'text': content,
+			'mode': 'markdown',
+			'context': ''
+		};
+		content = JSON.stringify( content );
+		postResource( 'https://api.github.com/markdown', content, onResource );
+	} // end FUNCTION render()
+
+	/**
+	* FUNCTION: onResource( html )
+	*	Handler for receiving rendered HTML.
+	*
+	* @private
+	* @param {String} html - rendered HTML
+	*/
+	function onResource( html ) {
 		document.getElementById( 'readme' ).innerHTML = html;
 		getSpec();
-	} // end FUNCTION render()
+	} // end FUNCTION onResource()
 
 	/**
 	* FUNCTION: getSpec()
