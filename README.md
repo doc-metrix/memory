@@ -419,7 +419,7 @@ Min | Max | Units | Metric Type | Data Type
 
 The amount of pages that cannot be paged-out of RAM. Unevictable is a superset of mlocked.
 
-Note: From Linux `2.6.28` to `2.6.30`, kernel must be configured with `CONFIG_UNEVICTABLE_LRU` to show this metric.
+Note: From Linux `2.6.28` to `2.6.30`, the kernel must be configured with `CONFIG_UNEVICTABLE_LRU` to show this metric.
 
 Min | Max | Units | Metric Type | Data Type 
 :---: | :---: | :---: | ---: | ---: |
