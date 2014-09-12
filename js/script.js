@@ -2,7 +2,15 @@
 (function() {
 	'use strict';
 
-	getResource( 'https://api.github.com/repos/doc-metrix/memory/contents/README.md', onReadme );
+	var URLs = {};
+
+	URLs.readme = 'https://api.github.com/repos/doc-metrix/memory/contents/README.md';
+	URLs.markdown = 'https://api.github.com/markdown';
+	URLs.spec = 'https://api.github.com/repos/doc-metrix/memory/contents/spec/index.json';
+
+	CONTEXT = 'doc-metrix/memory';
+
+	getResource( URLs.readme, onReadme );
 
 	// FUNCTIONS //
 
@@ -90,10 +98,10 @@
 		content = {
 			'text': content,
 			'mode': 'markdown',
-			'context': 'doc-metrix/memory'
+			'context': CONTEXT
 		};
 		content = JSON.stringify( content );
-		postResource( 'https://api.github.com/markdown', content, onResource );
+		postResource( URLs.markdown, content, onResource );
 	} // end FUNCTION render()
 
 	/**
@@ -115,7 +123,7 @@
 	* @private
 	*/
 	function getSpec() {
-		getResource( "https://api.github.com/repos/doc-metrix/memory/contents/spec/index.json", onSpec );
+		getResource( URLs.spec, onSpec );
 	} // end FUNCTION getSpec()
 
 	/**
