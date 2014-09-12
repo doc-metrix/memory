@@ -76,7 +76,7 @@
 	*/
 	function onReadme( blob ) {
 		var content = window.atob( JSON.parse( blob ).content );
-		render( escape( content ) );
+		render( content );
 	} // end FUNCTION onReadme()
 
 	/**
