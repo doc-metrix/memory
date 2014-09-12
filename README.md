@@ -316,7 +316,7 @@ Min | Max | Units | Metric Type | Data Type
 
 The amount of allocated memory that is strictly prohibited from being paged-out (swapped from RAM to disk). Since this memory cannot be swapped out, major page faults will not happen. Therefore, memory access time is guaranteed to be as fast as possible. Certain processes, such as those related to interactive user experience requiring a real time response, may be mlocked to ensure quality experience.
 
-Note: From Linux `2.6.28` to `2.6.30`, kernel must be configured with `CONFIG_UNEVICTABLE_LRU` to show this metric.
+Note: From Linux `2.6.28` to `2.6.30`, the kernel must be configured with `CONFIG_UNEVICTABLE_LRU` to show this metric.
 
 Min | Max | Units | Metric Type | Data Type 
 :---: | :---: | :---: | ---: | ---: |
@@ -419,7 +419,7 @@ Min | Max | Units | Metric Type | Data Type
 
 The amount of pages that cannot be paged-out of RAM. Unevictable is a superset of mlocked.
 
-Note: From Linux `2.6.28` to `2.6.30`, kernel must be configured with `CONFIG_UNEVICTABLE_LRU` to show this metric.
+Note: From Linux `2.6.28` to `2.6.30`, the kernel must be configured with `CONFIG_UNEVICTABLE_LRU` to show this metric.
 
 Min | Max | Units | Metric Type | Data Type 
 :---: | :---: | :---: | ---: | ---: |
@@ -578,5 +578,5 @@ List of utilities using this specification:
 ---
 ## Copyright
 
-Copyright &copy; 2014. NodePrime.
+Copyright &copy; 2014. [NodePrime](http://nodeprime.com).
 

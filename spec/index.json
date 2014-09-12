@@ -75,7 +75,7 @@
         "type": "raw",
         "formula": null,
         "description": "The number of pages larger than the system's default page size. These pages are not backed to the filesystem and have been mapped to user processes.",
-        "notes": "Linux kernel must be configured with CONFIG_TRANSPARENT_HUGEPAGE to show this metric.",
+        "notes": "The Linux kernel must be configured with CONFIG_TRANSPARENT_HUGEPAGE to show this metric.",
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
@@ -692,7 +692,7 @@
         "type": "raw",
         "formula": null,
         "description": "The amount of allocated memory that is strictly prohibited from being paged-out (swapped from RAM to disk). Since this memory cannot be swapped out, major page faults will not happen. Therefore, memory access time is guaranteed to be as fast as possible. Certain processes, such as those related to interactive user experience requiring a real time response, may be mlocked to ensure quality experience.",
-        "notes": "From Linux 2.6.28 to 2.6.30, kernel must be configured with CONFIG_UNEVICTABLE_LRU to show this metric.",
+        "notes": "From Linux 2.6.28 to 2.6.30, the kernel must be configured with CONFIG_UNEVICTABLE_LRU to show this metric.",
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
@@ -908,7 +908,7 @@
         "type": "raw",
         "formula": null,
         "description": "The amount of pages that cannot be paged-out of RAM. Unevictable is a superset of mlocked.",
-        "notes": "From Linux 2.6.28 to 2.6.30, kernel must be configured with CONFIG_UNEVICTABLE_LRU to show this metric.",
+        "notes": "From Linux 2.6.28 to 2.6.30, the kernel must be configured with CONFIG_UNEVICTABLE_LRU to show this metric.",
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
@@ -1042,11 +1042,11 @@
             "equation": "\\frac{swap_{total} - swap_{free}}{swap_{total}}",
             "variables": {
                 "swap_{free}": {
-                    "description": "The amount of free swap disk.",
+                    "description": "the amount of free swap disk",
                     "reference": "https://github.com/doc-metrix/memory"
                 },
                 "swap_{total}": {
-                    "description": "The total amount of swap disk.",
+                    "description": "the total amount of swap disk",
                     "reference": "https://github.com/doc-metrix/memory"
                 }
             }
@@ -1075,11 +1075,11 @@
             "equation": "\\frac{RAM_{total} - RAM_{free}}{RAM_{total}}",
             "variables": {
                 "RAM_{free}": {
-                    "description": "The amount of free RAM.",
+                    "description": "the amount of free RAM",
                     "reference": "https://github.com/doc-metrix/memory"
                 },
                 "RAM_{total}": {
-                    "description": "The total amount of usable RAM.",
+                    "description": "the total amount of usable RAM",
                     "reference": "https://github.com/doc-metrix/memory"
                 }
             }
@@ -1108,11 +1108,11 @@
             "equation": "\\frac{virtualMemory_{used}}{virtualMemory_{total}}",
             "variables": {
                 "virtualMemory_{used}": {
-                    "description": "The amount of space that have been virtually memory allocated.",
+                    "description": "the amount of space that have been virtually memory allocated",
                     "reference": "https://github.com/doc-metrix/memory"
                 },
                 "virtualMemory_{total}": {
-                    "description": "The total amount of space reserved for virtual memory allocation.",
+                    "description": "the total amount of space reserved for virtual memory allocation",
                     "reference": "https://github.com/doc-metrix/memory"
                 }
             }
