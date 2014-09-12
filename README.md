@@ -80,7 +80,7 @@ Min | Max | Units | Metric Type | Data Type
 
 #### [mem.commitLimit](http://linux.die.net/man/5/proc)
 
-The total amount of memory currently available to be allocated on the system based on the `overcommit_ratio` (`vm.overcommit_ratio` or `/proc/sys/vm/overcommit_ratio`). The metric is calculated by `(total usable RAM * overcommit ratio) + the total swap disk size`. This limit is only adhered to if strict overcommit accounting is enabled (mode 2 in `vm.overcommit_memory` or `/proc/sys/vm/overcommit_memory`). For example, on a system with 1GB of RAM and 7GB of swap with an `overcommit_ratio` of 30, the `CommitLimit` is 7.3GB.
+The total amount of memory currently available to be allocated on the system based on the `overcommit_ratio` (`vm.overcommit_ratio` or `/proc/sys/vm/overcommit_ratio`). This limit is only adhered to if strict overcommit accounting is enabled (mode 2 in `vm.overcommit_memory` or `/proc/sys/vm/overcommit_memory`). For example, on a system with 1GB of RAM and 7GB of swap with an `overcommit_ratio` of 30, the `CommitLimit` is 7.3GB.
 
 Min | Max | Units | Metric Type | Data Type 
 :---: | :---: | :---: | ---: | ---: |

@@ -190,15 +190,15 @@
             "equation": "(RAM_{total}*r_{overcommit}) + swap_{total}",
             "variables": {
                 "RAM_{total}": {
-                    "description": "The total amount of usable RAM.",
+                    "description": "the total amount of usable RAM",
                     "reference": "https://github.com/doc-metrix/memory"
                 },
                 "r_{overCommit}": {
-                    "description": "The overcommit ratio specifies the fraction of total usable RAM which is used in the calculation of the commit limit.",
+                    "description": "the overcommit ratio specifies the fraction of total usable RAM which is used in the calculation of the commit limit",
                     "reference": "https://github.com/doc-metrix/memory"
                 },
                 "swap_{total}": {
-                    "description": "The total amount of swap disk.",
+                    "description": "the total amount of swap disk",
                     "reference": "https://github.com/doc-metrix/memory"
                 }
             }
