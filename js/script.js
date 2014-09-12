@@ -113,6 +113,7 @@
 			'context': 'doc-metrix/memory'
 		};
 		content = JSON.stringify( content );
+		console.log( content );
 		postResource( 'https://api.github.com/markdown', content, onResource );
 	} // end FUNCTION render()
 
