@@ -1,7 +1,7 @@
 (function() {
 	'use strict';
 
-	getResource( 'https://github.com/repos/doc-metrix/memory/contents/README.md', onReadme );
+	getResource( 'https://api.github.com/repos/doc-metrix/memory/contents/README.md', onReadme );
 
 	// FUNCTIONS //
 
