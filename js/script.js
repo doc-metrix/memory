@@ -2,7 +2,8 @@
 (function() {
 	'use strict';
 
-	var URLs = {};
+	var URLs = {},
+		CONTEXT;
 
 	URLs.readme = 'https://api.github.com/repos/doc-metrix/memory/contents/README.md';
 	URLs.markdown = 'https://api.github.com/markdown';
