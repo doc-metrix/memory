@@ -80,26 +80,6 @@
 	} // end FUNCTION onReadme()
 
 	/**
-	* FUNCTION: escape( text )
-	*	Escapes text.
-	*
-	* @private
-	* @param {String} text - text to be escaped
-	* @returns {String} escaped text
-	*/
-	function escape( text ) {
-		return text
-			.replace( /[\\]/g, '\\\\' )
-			.replace( /[\"]/g, '\\\"' )
-			.replace( /[\/]/g, '\\/' )
-			.replace( /[\b]/g, '\\b' )
-			.replace( /[\f]/g, '\\f' )
-			.replace( /[\n]/g, '\\n' )
-			.replace( /[\r]/g, '\\r' )
-			.replace( /[\t]/g, '\\t' );
-	} // end FUNCTION escape()
-
-	/**
 	* FUNCTION: render( content )
 	*	Renders Markdown as HTML.
 	*
@@ -113,7 +93,6 @@
 			'context': 'doc-metrix/memory'
 		};
 		content = JSON.stringify( content );
-		console.log( content );
 		postResource( 'https://api.github.com/markdown', content, onResource );
 	} // end FUNCTION render()
 
@@ -196,7 +175,7 @@
 			variables = formula.variables;
 
 			// Get where in the DOM tree we want to place the equation:
-			el = $( 'a[name="'+name+'"]' )
+			el = $( 'a[name="user-content-'+name+'"]' )
 				.parent()
 				.nextUntil( 'table' )[ 0 ];
 
