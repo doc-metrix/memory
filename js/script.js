@@ -110,7 +110,7 @@
 		content = {
 			'text': content,
 			'mode': 'markdown',
-			'context': ''
+			'context': 'doc-metrix/memory'
 		};
 		content = JSON.stringify( content );
 		postResource( 'https://api.github.com/markdown', content, onResource );
