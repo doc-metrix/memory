@@ -186,8 +186,24 @@
         "sigFigs": null,
         "dataType": "integer",
         "type": "raw",
-        "formula": null,
-        "description": "The total amount of memory currently available to be allocated on the system based on the overcommit_ratio ('vm.overcommit_ratio' or '/proc/sys/vm/overcommit_ratio'). The metric is calculated by (total usable RAM * overcommit ratio) + the total swap disk size. This limit is only adhered to if strict overcommit accounting is enabled (mode 2 in 'vm.overcommit_memory' or '/proc/sys/vm/overcommit_memory'). For example, on a system with 1GB of RAM and 7GB of swap with an overcommit_ratio of 30, the CommitLimit is 7.3GB.",
+        "formula": {
+            "equation": "(RAM_{total}*r_{overcommit}) + swap_{total}",
+            "variables": {
+                "RAM_{total}": {
+                    "description": "The total amount of usable RAM.",
+                    "reference": "https://github.com/doc-metrix/memory"
+                },
+                "r_{overCommit}": {
+                    "description": "The overcommit ratio specifies the fraction of total usable RAM which is used in the calculation of the commit limit.",
+                    "reference": "https://github.com/doc-metrix/memory"
+                },
+                "swap_{total}": {
+                    "description": "The total amount of swap disk.",
+                    "reference": "https://github.com/doc-metrix/memory"
+                }
+            }
+        },
+        "description": "The total amount of memory currently available to be allocated on the system based on the overcommit_ratio ('vm.overcommit_ratio' or '/proc/sys/vm/overcommit_ratio'). This limit is only adhered to if strict overcommit accounting is enabled (mode 2 in 'vm.overcommit_memory' or '/proc/sys/vm/overcommit_memory'). For example, on a system with 1GB of RAM and 7GB of swap with an overcommit_ratio of 30, the CommitLimit is 7.3GB.",
         "notes": "",
         "platforms": {
             "linux": ["/proc/meminfo"]
