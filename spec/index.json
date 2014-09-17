@@ -13,8 +13,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["virtual memory"],
-        "vendors": "*",
+        "devices": ["virtualmemory"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc",
@@ -35,8 +34,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc",
@@ -57,8 +55,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["disk"],
-        "vendors": "*",
+        "devices": ["disk"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc",
@@ -79,8 +76,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc",
@@ -101,8 +97,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc",
@@ -123,8 +118,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc",
@@ -145,8 +139,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc",
@@ -169,8 +162,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc",
@@ -208,8 +200,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["virtual memory"],
-        "vendors": "*",
+        "devices": ["virtualmemory"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc",
@@ -230,8 +221,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["virtual memory"],
-        "vendors": "*",
+        "devices": ["virtualmemory"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc",
@@ -253,8 +243,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://wiki.fcctt.org/index.php?title=FC39Understanding_Virtual_Memory_Statistics_in_/proc/meminfo/en"
@@ -274,8 +263,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://wiki.fcctt.org/index.php?title=FC39Understanding_Virtual_Memory_Statistics_in_/proc/meminfo/en"
@@ -295,8 +283,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://wiki.fcctt.org/index.php?title=FC39Understanding_Virtual_Memory_Statistics_in_/proc/meminfo/en"
@@ -316,8 +303,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc",
@@ -338,8 +324,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc"
@@ -359,8 +344,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc"
@@ -380,8 +364,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc"
@@ -401,8 +384,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["virtual memory"],
-        "vendors": "*",
+        "devices": ["virtualmemory"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc"
@@ -422,8 +404,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["virtual memory"],
-        "vendors": "*",
+        "devices": ["virtualmemory"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc"
@@ -443,8 +424,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["virtual memory"],
-        "vendors": "*",
+        "devices": ["virtualmemory"],
         "classification": "memory",
         "refs": [
             "https://www.kernel.org/doc/Documentation/vm/hugetlbpage.txt"
@@ -464,8 +444,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["virtual memory"],
-        "vendors": "*",
+        "devices": ["virtualmemory"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc"
@@ -485,8 +464,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["kernel specific"],
-        "vendors": "*",
+        "devices": null,
         "classification": "memory",
         "refs": [
             "https://www.kernel.org/doc/Documentation/vm/hugetlbpage.txt"
@@ -506,8 +484,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["virtual memory"],
-        "vendors": "*",
+        "devices": ["virtualmemory"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc"
@@ -527,8 +504,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc"
@@ -548,8 +524,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["disk"],
-        "vendors": "*",
+        "devices": ["disk"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc"
@@ -569,8 +544,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc"
@@ -590,8 +564,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc"
@@ -611,8 +584,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc"
@@ -632,8 +604,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc",
@@ -654,8 +625,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc"
@@ -675,8 +645,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc"
@@ -696,8 +665,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc"
@@ -717,8 +685,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc",
@@ -739,8 +706,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc"
@@ -760,8 +726,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc",
@@ -782,8 +747,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc",
@@ -804,8 +768,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["virtual memory"],
-        "vendors": "*",
+        "devices": ["virtualmemory"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc",
@@ -826,8 +789,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc",
@@ -848,8 +810,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["virtual memory"],
-        "vendors": "*",
+        "devices": ["virtualmemory"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc",
@@ -870,8 +831,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["disk"],
-        "vendors": "*",
+        "devices": ["disk"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc"
@@ -891,8 +851,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["disk"],
-        "vendors": "*",
+        "devices": ["disk"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc"
@@ -912,8 +871,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc",
@@ -934,8 +892,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["virtual memory"],
-        "vendors": "*",
+        "devices": ["virtualmemory"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc",
@@ -956,8 +913,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["virtual memory"],
-        "vendors": "*",
+        "devices": ["virtualmemory"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc",
@@ -978,8 +934,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["virtual memory"],
-        "vendors": "*",
+        "devices": ["virtualmemory"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc",
@@ -1000,8 +955,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc",
@@ -1022,8 +976,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc",
@@ -1056,8 +1009,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["disk"],
-        "vendors": "*",
+        "devices": ["disk"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc"
@@ -1089,8 +1041,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["RAM"],
-        "vendors": "*",
+        "devices": ["ram"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc"
@@ -1122,8 +1073,7 @@
         "platforms": {
             "linux": ["/proc/meminfo"]
         },
-        "device": ["virtual memory"],
-        "vendors": "*",
+        "devices": ["virtualmemory"],
         "classification": "memory",
         "refs": [
             "http://linux.die.net/man/5/proc"
