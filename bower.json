@@ -1,21 +1,20 @@
 {
   "name": "doc-metrix-memory",
   "version": "0.0.0",
-  "description": "A specification for memory performance metrics.",
+  "description": "Documentation for memory performance metrics.",
   "authors": [
     {
       "name": "Nick Wei",
       "email": "nick@nodeprime.com"
     }
   ],
-  "main": "spec/index.json",
+  "main": "doc/index.json",
   "repository": {
     "type": "git",
     "url": "git://github.com/doc-metrix/memory.git"
   },
   "keywords": [
     "doc-metrix",
-    "specification",
     "memory",
     "metrics",
     "documentation"
